@@ -17,16 +17,19 @@
 
   &__content {
     @include mixin.flex(center);
+    width: 100%;
     @media screen and (max-width: 900px) {
       & {
         flex-direction: column;
-        padding: 35px;
+        padding: 30px;
+        margin-right: 0px;
       }
     }
   }
 
   &__container-text {
-    width: 100%;
+    padding: 10px;
+    width: 45%;
     height: 50%;
     @media screen and (max-width: 900px) {
       & {
@@ -42,7 +45,7 @@
 
   &__container-img {
     @include mixin.flex(center);
-    width: 100%;
+    width: 60%;
     margin-right: 280px;
     height: 300px;
     @media screen and (max-width: 1200px) {

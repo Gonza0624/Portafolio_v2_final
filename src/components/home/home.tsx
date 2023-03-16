@@ -1,32 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import fondo from "../../assets/fondo.png";
 import image from "../../assets/home-image.svg";
 import { ImArrowRight2 } from "react-icons/im";
-
-interface Props {
-  direction?: "left" | "right";
-}
+import { Fade } from "react-awesome-reveal";
 
 const home_bg = {
   backgroundImage: `url(${fondo})`,
 };
 
-const Home: React.FC<Props> = ({ direction = "right" }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+const Home: React.FC = () => {
   return (
     <section className="home-section">
       <div style={home_bg} className="home-section__parallax">
-        <div className={`fade-in ${isVisible ? "visible" : ""} ${direction}`}>
-          <div className="home-section__content">
+        <div className="home-section__content">
+          <Fade direction="left" delay={50} damping={0.1}>
             <figure className="home-section__container-img">
               <img width={450} src={image} alt="" />
             </figure>
-            <div className="home-section__container-text">
+          </Fade>
+          <div className="home-section__container-text">
+            <Fade direction="left" delay={50} damping={1}>
               <h1 className="home-section__title">
                 Hello{" "}
                 <span className="home-section__title-color">
@@ -38,13 +31,15 @@ const Home: React.FC<Props> = ({ direction = "right" }) => {
                 currently an intern at Globant and I'm looking to continue
                 growing and increasing my knowledge in software development.
               </p>
+            </Fade>
+            <Fade direction="left" delay={50} damping={9}>
               <div className="home-section__container-btn">
                 <button className="home-section__btn">
                   Ver hoja de vida{" "}
                   <ImArrowRight2 className="home-section__icon-btn" />
                 </button>
               </div>
-            </div>
+            </Fade>
           </div>
         </div>
       </div>

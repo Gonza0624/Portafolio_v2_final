@@ -6,14 +6,11 @@
 @use "scss/base/reset";
 @use "scss/base/base";
 
-// efecto fade in
-@use "scss/components/FadeIn";
-
 // barra de navegacion
 @use "scss/components/navigation.scss";
 
 // home
 @use "scss/components/home";
 
-// skills
-@use "scss/components/skills.scss";
+// main skills
+@use "scss/components/mainSkills.scss";

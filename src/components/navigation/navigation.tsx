@@ -18,7 +18,7 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
 
   useEffect(() => {
     function handleScroll() {
-      if (window.pageYOffset > 0) {
+      if (window.pageYOffset > 50) {
         setNavbarBackground("white");
         setNavbarShadow("0 5px 15px rgba(0, 0, 0, 0.1)");
         setNavbarTransition(

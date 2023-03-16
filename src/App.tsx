@@ -1,13 +1,13 @@
 import Home from "./components/home/home";
 import Navigation from "./components/navigation/navigation";
-import Skills from "./components/skills/skills";
+import MainSkills from "./components/skills/mainSkills";
 
 const App = () => {
   return (
     <div>
       <Navigation />
       <Home />
-      <Skills />
+      <MainSkills />
     </div>
   );
 };

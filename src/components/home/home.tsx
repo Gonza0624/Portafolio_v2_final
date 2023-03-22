@@ -27,9 +27,9 @@ const Home: React.FC = () => {
                 </span>
               </h1>
               <p className="home-section__paragraph">
-                Hello, welcome to my portfolio, I'm Gonzalo Salazar, I'm
-                currently an intern at Globant and I'm looking to continue
-                growing and increasing my knowledge in software development.
+                Hi, welcome to my portfolio, I'm Gonzalo Salazar, I was an
+                intern at Globant and I'm looking to keep growing and increasing
+                my knowledge in software development.
               </p>
             </Fade>
             <Fade direction="left" delay={50} damping={9}>

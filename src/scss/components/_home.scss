@@ -28,7 +28,6 @@
   }
 
   &__container-text {
-    // padding: 10px;
     width: 45%;
     height: 50%;
     @media screen and (max-width: 900px) {
@@ -58,6 +57,7 @@
   }
 
   &__title {
+    font-weight: 700;
     font-size: 3.3rem;
     margin: 15px 0px;
     @media screen and (max-width: 900px) {

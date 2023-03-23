@@ -1,0 +1,122 @@
+// Variables
+$dark-blue: #1e1b2d;
+$light-blue: #828092;
+$white: #fff;
+$black: #000;
+
+.projects-section {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+
+  &__row {
+    width: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    gap: 50px;
+    @media screen and (max-width: 1300px) {
+      & {
+        display: grid;
+        grid-template-columns: 400px 400px;
+      }
+    }
+    @media screen and (max-width: 850px) {
+      & {
+        display: grid;
+        grid-template-columns: 400px;
+      }
+    }
+  }
+
+  &__repo {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  &__title {
+    font-weight: 300;
+    margin: 15px 0px;
+    color: #fff;
+  }
+
+  &__box {
+    .content {
+      margin-bottom: -5px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      box-shadow: 0 5px 30px 10px rgba($black, 0.3);
+    }
+    .title {
+      a {
+        color: white;
+      }
+    }
+  }
+
+  &__wrapper {
+    background-color: $white;
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+    &:hover {
+      .data {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__card {
+    float: left;
+    padding: 1rem;
+    width: 100%;
+    @media screen and (max-width: 380px) {
+      & {
+        width: 400px;
+        padding: 30px;
+      }
+    }
+
+    .menu-content {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: inline-block;
+      }
+      a {
+        color: $white;
+      }
+    }
+
+    .data {
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      transform: translateY(calc(80px + 1em));
+      transition: transform 0.3s;
+      .content {
+        padding: 1.5em;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .type {
+      font-size: 12px;
+    }
+    .title {
+      margin-top: 10px;
+    }
+    .text {
+      height: 70px;
+      margin: 0;
+    }
+  }
+}

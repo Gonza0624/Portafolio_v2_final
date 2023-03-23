@@ -5,6 +5,11 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Signika Negative", sans-serif;
-  background-color:hsl(210, 36%, 96%);
+  background-color: #f6f9ff;
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: #49a6e9;
+  color: #fff;
 }

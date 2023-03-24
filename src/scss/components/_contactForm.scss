@@ -1,0 +1,146 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.contact-section {
+  @include mixin.flex(center);
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+
+  @media screen and (max-width: 400px) {
+    & {
+      height: 95vh;
+    }
+  }
+
+  &__form {
+    @include mixin.flex(center);
+    flex-direction: column;
+    width: 550px;
+    padding: 30px;
+    @media screen and (max-width: 550px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 3.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    @media screen and (max-width: 400px) {
+      & {
+        font-size: 2.3rem;
+        margin: 10px 0px;
+      }
+    }
+  }
+
+  &__title-color {
+    color: variables.$main-color;
+  }
+
+  &__link {
+    @include mixin.flex(center);
+    margin: 20px;
+    font-size: 17px;
+    text-align: center;
+    width: 100%;
+    color: #0000009c;
+    @media screen and (max-width: 450px) {
+      & {
+        flex-direction: column;
+        margin: 25px;
+      }
+    }
+  }
+
+  &__form-row {
+    flex-direction: column;
+    margin: 15px;
+    width: 100%;
+  }
+
+  &__form-input {
+    color: inherit;
+    padding: 20px;
+    border-radius: 2px;
+    border: none;
+    background-color: #f5f5f5;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+    color: #0000009c;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(#000, 0.1);
+      border-bottom: 3px solid variables.$main-color;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid variables.$main-color;
+    }
+  }
+
+  &__container-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__form-error {
+    color: red;
+  }
+
+  &__container-btn {
+    width: 100%;
+  }
+}
+
+.actived-btn {
+  @include mixin.flex(center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 15px 0px;
+  outline: none;
+  padding: 4px 20px;
+  background-color: variables.$main-color;
+  border-radius: 0.25rem;
+  border: 1px solid variables.$main-color;
+  color: variables.$white;
+  font-size: 1rem;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background-color: variables.$main-color--hover;
+    border-color: variables.$main-color--hover;
+  }
+}
+
+.disabled-btn {
+  @include mixin.flex(center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 15px 0px;
+  outline: none;
+  padding: 4px 20px;
+  background-color: variables.$main-color;
+  border-radius: 0.25rem;
+  border: 1px solid variables.$main-color;
+  color: variables.$white;
+  font-size: 1rem;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  cursor: not-allowed;
+}

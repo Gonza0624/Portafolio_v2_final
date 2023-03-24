@@ -1,4 +1,5 @@
 import About from "./components/about/about";
+import ContactForm from "./components/contactForm/contactForm";
 import Home from "./components/home/home";
 import Navigation from "./components/navigation/navigation";
 import Objective from "./components/objective/objective";
@@ -14,6 +15,7 @@ const App = () => {
       <Objective />
       <MainSkills />
       <Projects />
+      <ContactForm />
     </div>
   );
 };

@@ -3,9 +3,9 @@
 
 .objective-section {
   @include mixin.flex(flex-start);
-  height: 60vh;
+  height: 80vh;
   background-color: rgb(255, 255, 255);
-  padding: 0px;
+  padding-bottom: 70px;
 
   @media screen and (max-width: 500px) {
     & {

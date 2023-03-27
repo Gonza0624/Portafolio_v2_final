@@ -1,4 +1,5 @@
 import About from "./components/about/about";
+import Certificates from "./components/certificates/certificates";
 import ContactForm from "./components/contactForm/contactForm";
 import Home from "./components/home/home";
 import Navigation from "./components/navigation/navigation";
@@ -16,6 +17,7 @@ const App = () => {
       <MainSkills />
       <Projects />
       <ContactForm />
+      <Certificates />
     </div>
   );
 };

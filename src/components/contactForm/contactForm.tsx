@@ -20,7 +20,7 @@ const ContactForm = (): JSX.Element => {
     email: Yup.string()
       .email("* The email is not valid")
       .required("* Email is required"),
-    message: Yup.string().required("* The message is obligatory"),
+    message: Yup.string().required("* The message is required"),
   });
 
   const handleSubmit = async (

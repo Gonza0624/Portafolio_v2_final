@@ -1,6 +1,7 @@
 import About from "./components/about/about";
 import Certificates from "./components/certificates/certificates";
 import ContactForm from "./components/contactForm/contactForm";
+import Footer from "./components/footer/footer";
 import Home from "./components/home/home";
 import Navigation from "./components/navigation/navigation";
 import Objective from "./components/objective/objective";
@@ -18,6 +19,7 @@ const App = () => {
       <Projects />
       <ContactForm />
       <Certificates />
+      <Footer />
     </div>
   );
 };

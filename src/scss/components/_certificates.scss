@@ -8,7 +8,8 @@
 
   @media screen and (max-width: 500px) {
     & {
-      padding: 0px;
+      padding: 25px;
+      height: 75vh;
     }
   }
 
@@ -35,7 +36,7 @@
   }
 }
 
-.slick-slide img {
+.slick-slider img {
   height: 50%;
   background-size: cover;
   object-fit: contain;
@@ -51,6 +52,7 @@
 }
 
 .slick-next {
+  display: none;
   background-color: #49a6e9;
   padding-top: 1.5px;
   border-radius: 50%;
@@ -59,7 +61,12 @@
   }
 }
 
+.slick-slider .slick-prev, .slick-next {
+  visibility: hidden;
+}
+
 .slick-prev {
+  display: none;
   background-color: #49a6e9;
   border-radius: 50%;
   padding-top: 1.5px;

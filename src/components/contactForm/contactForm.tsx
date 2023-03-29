@@ -72,7 +72,7 @@ const ContactForm = (): JSX.Element => {
     setSubmitting(false);
   };
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

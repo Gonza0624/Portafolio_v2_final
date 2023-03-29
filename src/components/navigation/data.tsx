@@ -7,28 +7,33 @@ export const links: {
 }[] = [
   {
     id: 1,
-    url: "/",
+    url: "home",
     text: "Home",
   },
   {
-    id: 2,
-    url: "/skills",
-    text: "Skills",
-  },
-  {
     id: 3,
-    url: "/about",
+    url: "about",
     text: "About",
   },
   {
+    id: 2,
+    url: "skills",
+    text: "Skills",
+  },
+  {
     id: 4,
-    url: "/projects",
+    url: "projects",
     text: "Projects",
   },
   {
     id: 5,
-    url: "/contact",
+    url: "contact",
     text: "Contact",
+  },
+  {
+    id: 5,
+    url: "certificates",
+    text: "Certificates",
   },
 ];
 
@@ -38,23 +43,18 @@ export const social: {
   icon: JSX.Element;
 }[] = [
   {
-    id: 1,
-    url: "https://www.twitter.com",
-    icon: <FaFacebook fontSize={22} />,
-  },
-  {
     id: 2,
-    url: "https://www.twitter.com",
-    icon: <FaLinkedin fontSize={22} />,
+    url: "https://www.linkedin.com/in/gonzalo-salazar-carvajal-965284218/",
+    icon: <FaLinkedin fontSize={25} />,
   },
   {
     id: 3,
-    url: "https://www.twitter.com",
-    icon: <FaGithub fontSize={22} />,
+    url: "https://github.com/Gonza0624",
+    icon: <FaGithub fontSize={25} />,
   },
   {
     id: 4,
-    url: "https://www.twitter.com",
-    icon: <FaWhatsapp fontSize={22} />,
+    url: "https://api.whatsapp.com/send/?phone=573157304681",
+    icon: <FaWhatsapp fontSize={25} />,
   },
 ];

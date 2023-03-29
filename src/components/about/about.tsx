@@ -1,18 +1,33 @@
 import image from "../../assets/code.jpg";
 import { Fade } from "react-awesome-reveal";
+import { Reveal } from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(-200px, -100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <div className="about-section__card">
         <img src={image} alt="" />
         <div>
-          <Fade triggerOnce direction="right" delay={50} damping={0.1}>
+          {/* <Fade triggerOnce direction="right" delay={50} damping={0.1}></Fade> */}
+          <Reveal triggerOnce delay={50} damping={0.1} keyframes={customAnimation}>
             <p className="about-section__title">
               About <span className="about-section__title-color">Me</span>{" "}
             </p>
-          </Fade>
-          <Fade triggerOnce direction="right" delay={50} damping={0.1}>
+          </Reveal>
+          <Reveal triggerOnce delay={50} damping={0.1} keyframes={customAnimation}>
             <p className="about-section__paragraph">
               I am <span className="about-section__span">Gonzalo Salazar</span>,
               I am 20 years old, I did a technologist in the training program of
@@ -26,7 +41,9 @@ const About = () => {
               learner and I adapt to any situation, eager to learn and grow in
               the future personally and professionally.
             </p>
-          </Fade>
+          </Reveal>
+          {/* <Fade triggerOnce direction="right" delay={50} damping={0.1}>
+          </Fade> */}
         </div>
       </div>
     </section>

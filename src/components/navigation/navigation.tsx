@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { links, social } from "./data";
 import { IoMoonOutline } from "react-icons/io5";
+import { Link } from "react-scroll";
 
 export interface INavbar {}
 
@@ -18,7 +19,7 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
 
   useEffect(() => {
     function handleScroll() {
-      if (window.pageYOffset > 50) {
+      if (window.pageYOffset > 30) {
         setNavbarBackground("white");
         setNavbarShadow("0 5px 15px rgba(0, 0, 0, 0.1)");
         setNavbarTransition(
@@ -63,7 +64,10 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
           {/* <img src={logo} alt="logo" style={{width: "140px", height: "50px",}} /> */}
           <h1 className="brand">Gonzalo</h1>
           <IoMoonOutline fontSize={25} />
-          <button className="nav-toggle" onClick={() => setShowLinks(!showLinks)}>
+          <button
+            className="nav-toggle"
+            onClick={() => setShowLinks(!showLinks)}
+          >
             <FaBars />
           </button>
         </div>
@@ -74,7 +78,17 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
               const { id, url, text } = link;
               return (
                 <li key={id}>
-                  <a href={url}>{text}</a>
+                  <a className="links">
+                    <Link
+                      to={url}
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={200}
+                    >
+                      {text}
+                    </Link>
+                  </a>
                 </li>
               );
             })}
@@ -86,7 +100,9 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
             const { id, url, icon } = socialIcon;
             return (
               <li key={id}>
-                <a href={url}>{icon}</a>
+                <a target="_blank" href={url}>
+                  {icon}
+                </a>
               </li>
             );
           })}

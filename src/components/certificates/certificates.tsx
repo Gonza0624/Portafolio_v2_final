@@ -14,9 +14,9 @@ const settings = {
 
 const Certificates = () => {
   return (
-    <div className="certificates-section">
+    <div id="certificates" className="certificates-section">
       <h1 className="certificates-section__title">
-        My <span className="certificates-section__color">certificates</span>{" "}
+        Certi<span className="certificates-section__color">ficates</span>{" "}
       </h1>
       <Slider {...settings}>
         <div>

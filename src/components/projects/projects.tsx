@@ -5,7 +5,6 @@ import portfolio_v1_img from "../../assets/robot.png";
 import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
-  
   const ecommerce = {
     backgroundImage: `url(${fondo})`,
     backgroundSize: "cover",
@@ -26,14 +25,18 @@ const Projects = () => {
 
   return (
     <>
-      <div className="projects-section">
+      <div id="projects" className="projects-section">
         <div className="projects-section__row">
           <Fade triggerOnce direction="left" delay={100} damping={0.1}>
             <div className="projects-section__box projects-section__card">
               <div style={poke} className="projects-section__wrapper">
                 <div className="data">
                   <div className="content">
-                    <a className="projects-section__repo" href="">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/pokemon-project"}
+                    >
                       Repository »
                     </a>
                     <h1 className="projects-section__title">Pokedex</h1>
@@ -51,7 +54,11 @@ const Projects = () => {
               <div style={ecommerce} className="projects-section__wrapper">
                 <div className="data">
                   <div className="content">
-                    <a className="projects-section__repo" href="">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/proyectoEcommerce"}
+                    >
                       Repository »
                     </a>
                     <h1 className="projects-section__title">Ecommerce</h1>
@@ -70,7 +77,11 @@ const Projects = () => {
               <div style={rick} className="projects-section__wrapper">
                 <div className="data">
                   <div className="content">
-                    <a className="projects-section__repo" href="">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/Rick-And-Morty-API"}
+                    >
                       Repository »
                     </a>
                     <h1 className="projects-section__title">
@@ -91,7 +102,11 @@ const Projects = () => {
               <div style={portfolio_v1} className="projects-section__wrapper">
                 <div className="data">
                   <div className="content">
-                    <a className="projects-section__repo" href="">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/Mi-portafolio"}
+                    >
                       Repository »
                     </a>
                     <h1 className="projects-section__title">Portfolio V1</h1>

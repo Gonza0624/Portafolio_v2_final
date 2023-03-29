@@ -15,7 +15,7 @@ import { Fade } from "react-awesome-reveal";
 
 const MainSkills = () => {
   return (
-    <section className="main-skills-section">
+    <section id="skills" className="main-skills-section">
       <div>
         <p className="main-skills-section__title">
           Main <span className="main-skills-section__title-color">skills</span>{" "}

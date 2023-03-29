@@ -10,7 +10,7 @@ const home_bg = {
 
 const Home: React.FC = () => {
   return (
-    <section className="home-section">
+    <section id="home" className="home-section">
       <div style={home_bg} className="home-section__parallax">
         <div className="home-section__content">
           <Fade direction="left" delay={50} damping={0.1}>

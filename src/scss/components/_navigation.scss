@@ -20,7 +20,7 @@
   width: 220px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1030px) {
   .nav-header {
     width: 100%;
   }
@@ -37,7 +37,6 @@
 
 .nav-toggle:hover {
   color: variables.$main-color;
-  transform: rotate(90deg);
 }
 
 .links a {
@@ -48,11 +47,12 @@
   display: block;
   padding: 0.5rem 1rem;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 
 .links a:hover {
   background: variables.$main-color;
-  color: variables.$main-color;
+  color: #fff;
   padding-left: 1.5rem;
 }
 
@@ -61,16 +61,22 @@
 }
 
 .links-container {
+  background-color: transparent;
   height: 0;
   overflow: hidden;
   transition: all 0.3s linear;
+  @media screen and (max-width: 450px) {
+    & {
+      background-color: #fff;
+    }
+  }
 }
 
 .show-container {
-  height: 10rem;
+  height: 1rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1030px) {
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;

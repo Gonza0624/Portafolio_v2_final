@@ -8,21 +8,18 @@ $white: #fff;
 $black: #000;
 
 .projects-section {
+  @include mixin.flex(center);
   margin: auto;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 80px;
   margin-bottom: 60px;
   height: auto;
+  background-color: variables.$main-white;
 
   &__row {
     width: 100%;
     margin: auto 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixin.flex(center);
     display: grid;
     grid-template-columns: 400px 400px 400px;
     gap: 50px;

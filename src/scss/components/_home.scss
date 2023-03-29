@@ -3,6 +3,8 @@
 
 .home-section {
   @include mixin.flex(center);
+  background-color: black;
+  z-index: 100;
 
   &__parallax {
     @include mixin.flex(center);
@@ -60,6 +62,7 @@
     font-weight: 700;
     font-size: 3.3rem;
     margin: 15px 0px;
+    color: variables.$title-color;
     @media screen and (max-width: 900px) {
       & {
         width: 100%;
@@ -80,7 +83,7 @@
   &__paragraph {
     margin: 15px 0px;
     font-size: 1.2rem;
-    color: #0000009c;
+    color: variables.$text-color;
     line-height: 1.7;
     @media screen and (max-width: 500px) {
       & {
@@ -101,9 +104,6 @@
 
   &__btn {
     @include mixin.flex(center);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     margin: 15px 0px;
     outline: none;

@@ -13,9 +13,7 @@
 }
 
 .nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include mixin.flex(space-between);
   padding: 1rem;
   width: 220px;
 }
@@ -40,7 +38,6 @@
 }
 
 .links a {
-  color: hsl(209, 34%, 30%);
   font-size: 1rem;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
@@ -52,8 +49,13 @@
 
 .links a:hover {
   background: variables.$main-color;
-  color: #fff;
+  color: variables.$main-color;
   padding-left: 1.5rem;
+  @media screen and (max-width: 1030px) {
+    & {
+      background-color: variables.$white;
+    }
+  }
 }
 
 .social-icons {
@@ -67,7 +69,7 @@
   transition: all 0.3s linear;
   @media screen and (max-width: 450px) {
     & {
-      background-color: #fff;
+      background-color: variables.$white;
     }
   }
 }
@@ -80,9 +82,7 @@
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include mixin.flex(space-between);
     padding: 1rem;
   }
   .nav-header {
@@ -106,7 +106,7 @@
     background: transparent;
   }
   .social-icons {
-    display: flex;
+    @include mixin.flex(center);
   }
   .social-icons a {
     margin: 0 0.5rem;

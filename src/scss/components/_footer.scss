@@ -1,33 +1,27 @@
+@use "../abstracts/mixin";
 @use "../abstracts/variables";
 
 .section-main {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: variables.$white;
+  @include mixin.flex(center);
 
   &__footer {
+    @include mixin.flex(center);
     padding: 15px 0px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
   }
 
   &__footer &__row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixin.flex(center);
     width: 100%;
     margin: 1% 0%;
-    color: #000;
+    color: variables.$text-color;
     font-size: 0.8em;
   }
 
   &__footer &__row a {
     display: none;
-    // margin: 8px;
     text-decoration: none;
     color: variables.$main-color;
     transition: 0.5s;

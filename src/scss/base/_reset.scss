@@ -1,3 +1,6 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -57,25 +60,11 @@ h6 {
   isolation: isolate;
 }
 
-// ::-webkit-scrollbar {
-//   width: 30px;
-// }
-
-// ::-webkit-scrollbar-track {
-  // background-color: #cecece;
-//   border-radius: 50px;
-// }
-
-// ::-webkit-scrollbar-thumb {
-//   background-color: #49a6e9;
-//   border-radius: 50px;
-// }
-
 // Scrollbar ------
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #00bdbd #ffffff;
+  scrollbar-color: variables.$main-color variables.$white;
 }
 
 *::-webkit-scrollbar {
@@ -83,11 +72,11 @@ h6 {
 }
 
 *::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: variables.$white;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #49a6e9;
+  background-color: variables.$main-color;
   border-radius: 14px;
-  border: 3px solid #ffffff;
+  border: 3px solid variables.$white;
 }

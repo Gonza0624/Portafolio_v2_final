@@ -50,6 +50,19 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
     }
   }, [showLinks]);
 
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    setTheme(nextTheme);
+  };
+
   return (
     <nav
       className="navbar"
@@ -63,7 +76,10 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
         <div className="nav-header">
           {/* <img src={logo} alt="logo" style={{width: "140px", height: "50px",}} /> */}
           <h1 className="brand">Gonzalo</h1>
-          <IoMoonOutline fontSize={25} />
+          {/* <IoMoonOutline fontSize={25} /> */}
+          <button className="theme-toggle" onClick={toggleTheme}>
+            Toggle Theme
+          </button>
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}

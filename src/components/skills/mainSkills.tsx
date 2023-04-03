@@ -1,4 +1,3 @@
-// import image from "../../assets/code.jpg";
 import html from "../../assets/skills/html.png";
 import js from "../../assets/skills/js.png";
 import css from "../../assets/skills/css.png";

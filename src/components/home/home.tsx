@@ -1,14 +1,19 @@
-import React from "react";
-import fondo from "../../assets/fondo.png";
-import image from "../../assets/home-image.svg";
+import React, { useContext } from "react";
+import fondo1 from "../../assets/backgrounds/fondo.png";
+import fondo2 from "../../assets/backgrounds/fondo2.avif";
+import image from "../../assets/projects-img/home-image.svg";
 import { ImArrowRight2 } from "react-icons/im";
 import { Fade } from "react-awesome-reveal";
-
-const home_bg = {
-  backgroundImage: `url(${fondo})`,
-};
+import { ThemeContext } from "../themeContext/themeContext";
 
 const Home: React.FC = () => {
+  const { theme } = useContext(ThemeContext);
+
+  const home_bg = {
+    backgroundImage: `url(${theme === "light" ? fondo1 : fondo2})`,
+    backgroundSize: "cover",
+  };
+
   return (
     <section id="home" className="home-section">
       <div style={home_bg} className="home-section__parallax">

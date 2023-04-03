@@ -64,7 +64,7 @@ h6 {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: variables.$main-color variables.$white;
+  scrollbar-color: var(--main-color) var(--white);
 }
 
 *::-webkit-scrollbar {
@@ -72,11 +72,11 @@ h6 {
 }
 
 *::-webkit-scrollbar-track {
-  background: variables.$white;
+  background: var(--white);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: variables.$main-color;
+  background-color: var(--main-color);
   border-radius: 14px;
-  border: 3px solid variables.$white;
+  border: 3px solid var(--white);
 }

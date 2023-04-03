@@ -2,7 +2,7 @@
 @use "../abstracts/variables";
 
 .section-main {
-  background-color: variables.$white;
+  background-color: var(--white);
   @include mixin.flex(center);
 
   &__footer {
@@ -16,14 +16,14 @@
     @include mixin.flex(center);
     width: 100%;
     margin: 1% 0%;
-    color: variables.$text-color;
+    color: var(--text-color);
     font-size: 0.8em;
   }
 
   &__footer &__row a {
     display: none;
     text-decoration: none;
-    color: variables.$main-color;
+    color: var(--main-color);
     transition: 0.5s;
     @media screen and (max-width: 1030px) {
       & {
@@ -36,7 +36,7 @@
   }
 
   &__footer &__row a:hover {
-    color: variables.$main-color;
+    color: var(--main-color);
   }
 
   &__footer &__row ul {

@@ -1,8 +1,8 @@
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import certificado from "../../assets/certificado.png";
-import bootcamp from "../../assets/bootcamp.png";
+import certificado from "../../assets/certificates/certificado.png";
+import bootcamp from "../../assets/certificates/bootcamp.png";
+import Slider from "react-slick";
 
 const settings = {
   dots: true,

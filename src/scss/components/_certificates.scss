@@ -2,7 +2,7 @@
 @use "../abstracts/variables";
 
 .certificates-section {
-  background-color: variables.$main-white;
+  background-color: var(--main-white);
   padding: 100px;
   height: auto;
 
@@ -18,7 +18,7 @@
     font-size: 3.3rem;
     font-weight: 700;
     margin-bottom: 50px;
-    color: variables.$title-color;
+    color: var(--title-color);
     @media screen and (max-width: 600px) {
       & {
         font-size: 2.3rem;
@@ -33,7 +33,7 @@
   }
 
   &__color {
-    color: variables.$main-color;
+    color: var(--main-color);
   }
 }
 

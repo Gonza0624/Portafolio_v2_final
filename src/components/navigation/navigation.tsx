@@ -1,16 +1,29 @@
-// import logo from "../../assets/logo3.png";
-import React, { useState, useRef, useEffect } from "react";
+import "../../scss/abstracts/_variables.scss";
+import "@theme-toggles/react/css/Within.css";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { FaBars } from "react-icons/fa";
 import { links, social } from "./data";
-import { IoMoonOutline } from "react-icons/io5";
 import { Link } from "react-scroll";
+import { Within } from "@theme-toggles/react";
+import { ThemeContext } from "../themeContext/themeContext";
 
 export interface INavbar {}
 
 const Navbar: React.FC<INavbar> = (): React.ReactElement => {
+  // mostrar los link de la barra de navegacion y los iconos
   const [showLinks, setShowLinks] = useState<boolean>(false);
   const linksContainerRef = useRef<any>(null);
   const linksRef = useRef<any>(null);
+
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
+
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${linksHeight}px`;
+    } else {
+      linksContainerRef.current.style.height = "0px";
+    }
+  }, [showLinks]);
 
   // navbar scroll
   const [navbarBackground, setNavbarBackground] = useState("transparent");
@@ -20,10 +33,10 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
   useEffect(() => {
     function handleScroll() {
       if (window.pageYOffset > 30) {
-        setNavbarBackground("white");
-        setNavbarShadow("0 5px 15px rgba(0, 0, 0, 0.1)");
+        setNavbarBackground("var(--navbar)");
+        setNavbarShadow("var(--navShadow)");
         setNavbarTransition(
-          "background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out"
+          "background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out"
         );
       } else {
         setNavbarBackground("transparent");
@@ -40,28 +53,8 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
     };
   }, []);
 
-  useEffect(() => {
-    const linksHeight = linksRef.current.getBoundingClientRect().height;
-
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = "0px";
-    }
-  }, [showLinks]);
-
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove("light", "dark");
-    root.classList.add(theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : "light";
-    setTheme(nextTheme);
-  };
+  // estado global para cambiar el tema entre light y dark
+  const { toggleTheme } = useContext(ThemeContext);
 
   return (
     <nav
@@ -74,12 +67,14 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
     >
       <div className="nav-center">
         <div className="nav-header">
-          {/* <img src={logo} alt="logo" style={{width: "140px", height: "50px",}} /> */}
           <h1 className="brand">Gonzalo</h1>
-          {/* <IoMoonOutline fontSize={25} /> */}
-          <button className="theme-toggle" onClick={toggleTheme}>
-            Toggle Theme
-          </button>
+          <div>
+            <Within
+              className="theme-btn"
+              onToggle={toggleTheme}
+              duration={750}
+            />
+          </div>
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}

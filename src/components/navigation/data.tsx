@@ -1,4 +1,4 @@
-import { FaGithub, FaWhatsapp, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 export const links: {
   id: number;
@@ -11,12 +11,12 @@ export const links: {
     text: "Home",
   },
   {
-    id: 3,
+    id: 2,
     url: "about",
     text: "About",
   },
   {
-    id: 2,
+    id: 3,
     url: "skills",
     text: "Skills",
   },
@@ -31,7 +31,7 @@ export const links: {
     text: "Contact",
   },
   {
-    id: 5,
+    id: 6,
     url: "certificates",
     text: "Certificates",
   },
@@ -43,17 +43,17 @@ export const social: {
   icon: JSX.Element;
 }[] = [
   {
-    id: 2,
+    id: 1,
     url: "https://www.linkedin.com/in/gonzalo-salazar-carvajal-965284218/",
     icon: <FaLinkedin fontSize={25} />,
   },
   {
-    id: 3,
+    id: 2,
     url: "https://github.com/Gonza0624",
     icon: <FaGithub fontSize={25} />,
   },
   {
-    id: 4,
+    id: 3,
     url: "https://api.whatsapp.com/send/?phone=573157304681",
     icon: <FaWhatsapp fontSize={25} />,
   },

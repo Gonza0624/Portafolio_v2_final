@@ -7,20 +7,29 @@ import Navigation from "./components/navigation/navigation";
 import Objective from "./components/objective/objective";
 import Projects from "./components/projects/projects";
 import MainSkills from "./components/skills/mainSkills";
+import { ThemeProvider } from "./components/themeContext/themeContext";
+import { useState } from "react";
 
 const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   return (
-    <div>
-      <Navigation />
-      <Home />
-      <About />
-      <Objective />
-      <MainSkills />
-      <Projects />
-      <ContactForm />
-      <Certificates />
-      <Footer />
-    </div>
+    <ThemeProvider value={{ theme, toggleTheme }}>
+      <main>
+        <Navigation />
+        <Home />
+        <About />
+        <Objective />
+        <MainSkills />
+        <Projects />
+        <ContactForm />
+        <Certificates />
+        <Footer />
+      </main>
+    </ThemeProvider>
   );
 };
 

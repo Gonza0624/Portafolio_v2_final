@@ -4,7 +4,7 @@
 .about-section {
   @include mixin.flex(flex-end);
   height: 90vh;
-  background-color: variables.$white;
+  background-color: var(--white);
   padding: 0px;
 
   @media screen and (max-width: 500px) {
@@ -17,7 +17,7 @@
     font-size: 3.3rem;
     font-weight: 700;
     margin: 20px 0px;
-    color: variables.$title-color;
+    color: var(--title-color);
     @media screen and (max-width: 900px) {
       & {
         width: 100%;
@@ -32,13 +32,13 @@
   }
 
   &__title-color {
-    color: variables.$main-color;
+    color: var(--main-color);
   }
 
   &__paragraph {
     margin: 15px 0px;
     font-size: 1.2rem;
-    color: variables.$text-color !important;
+    color: var(--text-color) !important;
     line-height: 1.7;
     @media screen and (max-width: 500px) {
       & {
@@ -48,7 +48,7 @@
   }
 
   &__span {
-    color: variables.$main-color;
+    color: var(--main-color);
   }
 
   &__card {
@@ -57,7 +57,7 @@
     height: 470px;
     max-width: 1100px;
     padding: 50px 30px 50px 20px;
-    background-color: variables.$main-white;
+    background-color: var(--main-white);
     border-radius: 7px;
     img {
       height: 370px;

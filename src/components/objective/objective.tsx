@@ -1,5 +1,4 @@
-import image from "../../assets/code.jpg";
-import { Fade } from "react-awesome-reveal";
+import image from "../../assets/about-img/code.jpg";
 import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
@@ -20,7 +19,6 @@ const Objective = () => {
     <section id="objective" className="objective-section">
       <div className="objective-section__card">
         <div>
-          {/* <Fade triggerOnce direction="left" delay={50} damping={0.1}></Fade> */}
           <Reveal
             triggerOnce
             delay={50}
@@ -45,8 +43,6 @@ const Objective = () => {
               development and gain skills in backend and design.
             </p>
           </Reveal>
-          {/* <Fade triggerOnce direction="left" delay={5} damping={0.1}>
-          </Fade> */}
         </div>
         <img src={image} alt="" />
       </div>

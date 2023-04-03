@@ -7,11 +7,11 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Signika Negative", sans-serif;
-  background-color: variables.$main-white;
+  background-color: var(--main-white);
   scroll-behavior: smooth;
 }
 
 ::selection {
-  background: variables.$main-color;
-  color: variables.$white;
+  background: var(--main-color);
+  color: var(--white);
 }

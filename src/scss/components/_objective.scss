@@ -53,7 +53,7 @@
 
   &__card {
     @include mixin.flex(center);
-    width: 100%;
+    width: 90%;
     height: 470px;
     max-width: 1100px;
     padding: 50px 30px 50px 20px;

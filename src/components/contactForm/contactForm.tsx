@@ -7,8 +7,11 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Fade } from "react-awesome-reveal";
+import { useState } from "react";
 
 const ContactForm = (): JSX.Element => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const initialValues = {
     name: "",
     email: "",
@@ -28,6 +31,8 @@ const ContactForm = (): JSX.Element => {
     { setSubmitting, resetForm }: any
   ) => {
     const { name, email, message } = values;
+
+    setIsSubmitting(true);
 
     try {
       const templateParams = {
@@ -69,6 +74,7 @@ const ContactForm = (): JSX.Element => {
       });
     }
 
+    setIsSubmitting(false);
     setSubmitting(false);
   };
   return (
@@ -163,12 +169,12 @@ const ContactForm = (): JSX.Element => {
               >
                 <button
                   type="submit"
-                  disabled={!(dirty && isValid)}
+                  disabled={!(dirty && isValid) || isSubmitting}
                   className={
                     !(dirty && isValid) ? "disabled-btn" : "actived-btn"
                   }
                 >
-                  Send message
+                  {isSubmitting ? "Sending..." : "Send message"}
                 </button>
               </Fade>
               <ToastContainer />

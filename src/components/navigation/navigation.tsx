@@ -2,6 +2,7 @@ import "../../scss/abstracts/_variables.scss";
 import "@theme-toggles/react/css/Within.css";
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { FaBars } from "react-icons/fa";
+import logo from "/logo/logo.png";
 import { links, social } from "./data";
 import { Link } from "react-scroll";
 import { Within } from "@theme-toggles/react";
@@ -67,8 +68,11 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
     >
       <div className="nav-center">
         <div className="nav-header">
-          <h1 className="brand">Gonzalo</h1>
-          <div>
+          <figure className="container-logo">
+            <img className="logo" src={logo} alt="" />
+            <p className="brand">onzalo</p>
+          </figure>
+          <div className="container-theme-btn">
             <Within
               className="theme-btn"
               onToggle={toggleTheme}

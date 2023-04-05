@@ -45,6 +45,14 @@
         font-size: 1.1rem;
       }
     }
+
+    @media screen and (max-width: 360px) {
+      & {
+        height: 1rem;
+        height: auto;
+        margin-bottom: 100px;
+      }
+    }
   }
 
   &__span {
@@ -53,7 +61,7 @@
 
   &__card {
     @include mixin.flex(center);
-    width: 100%;
+    width: 90%;
     height: 470px;
     max-width: 1100px;
     padding: 50px 30px 50px 20px;

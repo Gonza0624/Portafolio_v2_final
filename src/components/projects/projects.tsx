@@ -105,7 +105,7 @@ const Projects = () => {
                     <a
                       target={"_blank"}
                       className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/Mi-portafolio"}
+                      href={"https://github.com/Gonza0624/portafolio_v1"}
                     >
                       Repository »
                     </a>

@@ -7,6 +7,10 @@
   z-index: 100;
 }
 
+.container-theme-btn {
+  @include mixin.flex(center);
+}
+
 .theme-btn {
   font-size: 30px;
   @include mixin.flex(center);
@@ -15,7 +19,7 @@
 
 .brand {
   color: var(--main-color);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .nav-header {
@@ -30,7 +34,20 @@
   }
 }
 
+.container-logo {
+  @include mixin.flex(center);
+  flex-direction: row;
+}
+
+.logo {
+  @include mixin.flex(center);
+  margin: 0;
+  width: 35px;
+  height: 40px;
+}
+
 .nav-toggle {
+  @include mixin.flex(center);
   font-size: 1.5rem;
   color: var(--main-color);
   background: transparent;
@@ -60,7 +77,7 @@
   padding-left: 1.5rem;
   @media screen and (max-width: 1030px) {
     & {
-      background-color: var(--white);
+      background-color: var(--main-white);
     }
   }
 }
@@ -76,7 +93,7 @@
   transition: all 0.3s linear;
   @media screen and (max-width: 450px) {
     & {
-      background-color: var(--white);
+      background-color: var(--main-white);
     }
   }
 }

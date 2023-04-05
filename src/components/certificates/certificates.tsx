@@ -1,6 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import certificado from "../../assets/certificates/certificado.png";
+import globant from "../../assets/certificates/globant.png";
 import bootcamp from "../../assets/certificates/bootcamp.png";
 import Slider from "react-slick";
 
@@ -20,7 +20,7 @@ const Certificates = () => {
       </h1>
       <Slider {...settings}>
         <div>
-          <img src={certificado} alt="Imagen 1" />
+          <img src={globant} alt="Imagen 1" />
         </div>
         <div>
           <img src={bootcamp} alt="Imagen 2" />

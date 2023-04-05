@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import fondo1 from "../../assets/backgrounds/fondo.png";
-import fondo2 from "../../assets/backgrounds/fondo2.avif";
+import fondo2 from "../../assets/backgrounds/fondo2.png";
 import image from "../../assets/projects-img/home-image.svg";
 import { ImArrowRight2 } from "react-icons/im";
 import { Fade } from "react-awesome-reveal";
@@ -32,17 +32,21 @@ const Home: React.FC = () => {
                 </span>
               </h1>
               <p className="home-section__paragraph">
-                Hi, welcome to my portfolio, I'm Gonzalo Salazar, I was an
-                intern at Globant and I'm looking to keep growing and increasing
-                my knowledge in software development.
+                Welcome to my portfolio! I am a passionate software developer
+                with a love for technology and programming, and here you can see
+                some of my latest work.
               </p>
             </Fade>
             <Fade direction="left" delay={50} damping={9}>
               <div className="home-section__container-btn">
-                <button className="home-section__btn">
-                  Ver hoja de vida{" "}
-                  <ImArrowRight2 className="home-section__icon-btn" />
-                </button>
+                <a
+                  target="_blank"
+                  type="button"
+                  href="https://drive.google.com/file/d/1_t2siUkXRtVVUA4YAJLLjBS-zF2mb6ey/view"
+                  className="home-section__btn"
+                >
+                  My resume <ImArrowRight2 className="home-section__icon-btn" />
+                </a>
               </div>
             </Fade>
           </div>

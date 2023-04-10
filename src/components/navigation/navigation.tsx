@@ -93,17 +93,16 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
               const { id, url, text } = link;
               return (
                 <li key={id}>
-                  <a className="links">
-                    <Link
-                      to={url}
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={200}
-                    >
-                      {text}
-                    </Link>
-                  </a>
+                  <Link
+                    to={url}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={200}
+                    className="links"
+                  >
+                    {text}
+                  </Link>
                 </li>
               );
             })}

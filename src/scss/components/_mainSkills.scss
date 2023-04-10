@@ -7,8 +7,7 @@
   background-color: var(--white);
   padding: 20px;
   flex-direction: column;
-
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 740px) {
     & {
       height: 150vh;
       padding-top: 0;
@@ -36,10 +35,11 @@
     font-weight: 700;
     margin-bottom: 50px;
     color: var(--title-color);
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 740px) {
       & {
         font-size: 1.9rem;
         margin: 50px 0px;
+        margin-top: 100px;
       }
     }
   }

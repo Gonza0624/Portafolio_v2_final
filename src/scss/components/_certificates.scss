@@ -9,6 +9,13 @@
   @media screen and (max-width: 500px) {
     & {
       padding: 25px;
+      height: 85vh;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    & {
+      padding: 25px;
       height: 75vh;
     }
   }

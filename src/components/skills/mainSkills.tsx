@@ -1,15 +1,15 @@
-import html from "../../assets/skills/html.png";
-import js from "../../assets/skills/js.png";
-import css from "../../assets/skills/css.png";
-import react from "../../assets/skills/react.png";
-import git from "../../assets/skills/git.png";
-import sass from "../../assets/skills/sass.png";
-import typeScript from "../../assets/skills/typeScript.png";
+import html from "../../assets/skills/html.webp";
+import js from "../../assets/skills/js.webp";
+import css from "../../assets/skills/css.webp";
+import react from "../../assets/skills/react.webp";
+import git from "../../assets/skills/git.webp";
+import sass from "../../assets/skills/sass.webp";
+import typeScript from "../../assets/skills/typeScript.webp";
 import ReactN from "../../assets/skills/RN.svg";
-import php from "../../assets/skills/php.png";
-import laravel from "../../assets/skills/laravel.png";
-import bootstrap from "../../assets/skills/bootstrap.png";
-import mysql from "../../assets/skills/mysql.png";
+import php from "../../assets/skills/php.webp";
+import laravel from "../../assets/skills/laravel.webp";
+import bootstrap from "../../assets/skills/bootstrap.webp";
+import mysql from "../../assets/skills/mysql.webp";
 import { Fade } from "react-awesome-reveal";
 
 const MainSkills = () => {

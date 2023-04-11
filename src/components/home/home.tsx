@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import fondo1 from "../../assets/backgrounds/fondo.png";
-import fondo2 from "../../assets/backgrounds/fondo2.png";
-import image from "../../assets/projects-img/home-image.svg";
+import fondo1 from "../../assets/backgrounds/fondo.webp";
+import fondo2 from "../../assets/backgrounds/fondo2.webp";
+import image from "../../assets/projects-img/home-image.webp";
 import { ImArrowRight2 } from "react-icons/im";
 import { Fade } from "react-awesome-reveal";
 import { ThemeContext } from "../themeContext/themeContext";

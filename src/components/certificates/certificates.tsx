@@ -1,7 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import globant from "../../assets/certificates/globant.png";
-import bootcamp from "../../assets/certificates/bootcamp.png";
+import globant from "../../assets/certificates/globant.webp";
+import bootcamp from "../../assets/certificates/bootcamp.webp";
 import Slider from "react-slick";
 
 const settings = {

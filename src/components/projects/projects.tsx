@@ -1,7 +1,7 @@
 import pokeimg from "../../assets/projects-img/poke.webp";
-import fondo from "../../assets/projects-img/ecommerce.jfif";
-import rickimg from "../../assets/projects-img/rick2.jpg";
-import portfolio_v1_img from "../../assets/projects-img/robot.png";
+import fondo from "../../assets/projects-img/ecommerce.webp";
+import rickimg from "../../assets/projects-img/rick2.webp";
+import portfolio_v1_img from "../../assets/projects-img/robot.webp";
 import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {

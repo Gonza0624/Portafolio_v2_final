@@ -1,4 +1,4 @@
-import pokeimg from "../../assets/projects-img/poke.jpg";
+import pokeimg from "../../assets/projects-img/poke.webp";
 import fondo from "../../assets/projects-img/ecommerce.jfif";
 import rickimg from "../../assets/projects-img/rick2.jpg";
 import portfolio_v1_img from "../../assets/projects-img/robot.png";

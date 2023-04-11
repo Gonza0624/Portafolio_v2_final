@@ -1,4 +1,4 @@
-import image from "../../assets/about-img/code.jpg";
+import image from "../../assets/about-img/code.webp";
 import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 

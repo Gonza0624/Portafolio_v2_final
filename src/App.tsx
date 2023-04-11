@@ -8,16 +8,10 @@ import Objective from "./components/objective/objective";
 import Projects from "./components/projects/projects";
 import MainSkills from "./components/skills/mainSkills";
 import { ThemeProvider } from "./components/themeContext/themeContext";
-import { useState } from "react";
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
   return (
-    <ThemeProvider value={{ theme, toggleTheme }}>
+    <ThemeProvider>
       <main>
         <Navigation />
         <Home />

@@ -1,4 +1,4 @@
-import image from "../../assets/about-img/code.webp";
+import image2 from "../../assets/about-img/code2.webp";
 import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
@@ -44,7 +44,7 @@ const Objective = () => {
             </p>
           </Reveal>
         </div>
-        <img src={image} alt="" />
+        <img src={image2} alt="" />
       </div>
     </section>
   );

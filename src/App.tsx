@@ -12,17 +12,15 @@ import { ThemeProvider } from "./components/themeContext/themeContext";
 const App = () => {
   return (
     <ThemeProvider>
-      <main>
-        <Navigation />
-        <Home />
-        <About />
-        <Objective />
-        <MainSkills />
-        <Projects />
-        <ContactForm />
-        <Certificates />
-        <Footer />
-      </main>
+      <Navigation />
+      <Home />
+      <About />
+      <Objective />
+      <MainSkills />
+      <Projects />
+      <ContactForm />
+      <Certificates />
+      <Footer />
     </ThemeProvider>
   );
 };

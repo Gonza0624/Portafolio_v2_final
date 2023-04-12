@@ -25,101 +25,99 @@ const Projects = () => {
 
   return (
     <>
-      <div id="projects" className="projects-section">
-        <div className="projects-section__row">
-          <Fade triggerOnce direction="left" delay={100} damping={0.1}>
-            <div className="projects-section__box projects-section__card">
-              <div style={poke} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/pokemon-project"}
-                    >
-                      Repository »
-                    </a>
-                    <h1 className="projects-section__title">Pokedex</h1>
-                    <p className="text">
-                      "Application made with react native, consuming the pokemon
-                      api to show the characters and their details."
-                    </p>
-                  </div>
+      <div id="projects" className="projects-section__row">
+        <Fade triggerOnce direction="left" delay={100} damping={0.1}>
+          <div className="projects-section__box projects-section__card">
+            <div style={poke} className="projects-section__wrapper">
+              <div className="data">
+                <div className="content">
+                  <a
+                    target={"_blank"}
+                    className="projects-section__repo"
+                    href={"https://github.com/Gonza0624/pokemon-project"}
+                  >
+                    Repository »
+                  </a>
+                  <h1 className="projects-section__title">Pokedex</h1>
+                  <p className="text">
+                    "Application made with react native, consuming the pokemon
+                    api to show the characters and their details."
+                  </p>
                 </div>
               </div>
             </div>
-          </Fade>
-          <Fade triggerOnce direction="left" delay={50} damping={0.1}>
-            <div className="projects-section__box projects-section__card">
-              <div style={ecommerce} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/proyectoEcommerce"}
-                    >
-                      Repository »
-                    </a>
-                    <h1 className="projects-section__title">Ecommerce</h1>
-                    <p className="text">
-                      "Functional Ecommerce made with Laravel, Bootstrap and
-                      MySQL, contains product catalog, detail, shopping cart,
-                      admin dashboard etc."
-                    </p>
-                  </div>
+          </div>
+        </Fade>
+        <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+          <div className="projects-section__box projects-section__card">
+            <div style={ecommerce} className="projects-section__wrapper">
+              <div className="data">
+                <div className="content">
+                  <a
+                    target={"_blank"}
+                    className="projects-section__repo"
+                    href={"https://github.com/Gonza0624/proyectoEcommerce"}
+                  >
+                    Repository »
+                  </a>
+                  <h1 className="projects-section__title">Ecommerce</h1>
+                  <p className="text">
+                    "Functional Ecommerce made with Laravel, Bootstrap and
+                    MySQL, contains product catalog, detail, shopping cart,
+                    admin dashboard etc."
+                  </p>
                 </div>
               </div>
             </div>
-          </Fade>
-          <Fade triggerOnce direction="left" delay={50} damping={0.1}>
-            <div className="projects-section__box projects-section__card">
-              <div style={rick} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/Rick-And-Morty-API"}
-                    >
-                      Repository »
-                    </a>
-                    <h1 className="projects-section__title">
-                      Rick and morty api
-                    </h1>
-                    <p className="text">
-                      "project made with react, typescript, css for the
-                      consumption of the api of rick and morty where each of the
-                      characters are shown with their details and page layout."
-                    </p>
-                  </div>
+          </div>
+        </Fade>
+        <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+          <div className="projects-section__box projects-section__card">
+            <div style={rick} className="projects-section__wrapper">
+              <div className="data">
+                <div className="content">
+                  <a
+                    target={"_blank"}
+                    className="projects-section__repo"
+                    href={"https://github.com/Gonza0624/Rick-And-Morty-API"}
+                  >
+                    Repository »
+                  </a>
+                  <h1 className="projects-section__title">
+                    Rick and morty api
+                  </h1>
+                  <p className="text">
+                    "project made with react, typescript, css for the
+                    consumption of the api of rick and morty where each of the
+                    characters are shown with their details and page layout."
+                  </p>
                 </div>
               </div>
             </div>
-          </Fade>
-          <Fade triggerOnce direction="left" delay={50} damping={0.1}>
-            <div className="projects-section__box projects-section__card">
-              <div style={portfolio_v1} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/portafolio_v1"}
-                    >
-                      Repository »
-                    </a>
-                    <h1 className="projects-section__title">Portfolio V1</h1>
-                    <p className="text">
-                      "this was the first version of my portfolio made during my
-                      internship at globant using react, javascript and sass"
-                    </p>
-                  </div>
+          </div>
+        </Fade>
+        <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+          <div className="projects-section__box projects-section__card">
+            <div style={portfolio_v1} className="projects-section__wrapper">
+              <div className="data">
+                <div className="content">
+                  <a
+                    target={"_blank"}
+                    className="projects-section__repo"
+                    href={"https://github.com/Gonza0624/portafolio_v1"}
+                  >
+                    Repository »
+                  </a>
+                  <h1 className="projects-section__title">Portfolio V1</h1>
+                  <p className="text">
+                    "this was the first version of my portfolio made during my
+                    internship at globant using react, javascript and sass"
+                  </p>
                 </div>
               </div>
             </div>
-          </Fade>
-        </div>
+          </div>
+        </Fade>
       </div>
     </>
   );

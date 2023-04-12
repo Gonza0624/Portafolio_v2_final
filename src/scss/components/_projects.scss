@@ -34,6 +34,16 @@ $black: #000;
         grid-template-columns: 400px;
       }
     }
+
+    @media screen and (max-width: 376px) {
+      & {
+        @include mixin.flex(center);
+        flex-direction: column;
+        grid-template-columns: 300px;
+        width: 100%;
+        margin: 20px 0px;
+      }
+    }
   }
 
   &__repo {
@@ -78,10 +88,18 @@ $black: #000;
     float: left;
     padding: 1rem;
     width: 100%;
-    @media screen and (max-width: 380px) {
+
+    @media screen and (max-width: 376px) {
       & {
-        width: 400px;
-        padding: 30px;
+        width: 320px;
+        padding: 0px;
+      }
+    }
+
+    @media screen and (max-width: 330px) {
+      & {
+        width: 280px;
+        padding: 0px;
       }
     }
 

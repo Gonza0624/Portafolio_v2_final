@@ -70,3 +70,23 @@
 .slick-prev {
   display: none;
 }
+
+.slick-dots li button:before {
+  font-family: slick;
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "\2022";
+  text-align: center;
+  opacity: 0.25;
+  color: var(--main-color);
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: var(--main-color);
+}

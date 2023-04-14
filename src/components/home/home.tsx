@@ -42,7 +42,7 @@ const Home: React.FC = () => {
                 <a
                   target="_blank"
                   type="button"
-                  href="https://drive.google.com/file/d/1_t2siUkXRtVVUA4YAJLLjBS-zF2mb6ey/view"
+                  href="https://drive.google.com/file/d/15ksdSI-8a8pV3P5QcX1P3cu0K7k6jCjI/view"
                   className="home-section__btn"
                 >
                   My resume <ImArrowRight2 className="home-section__icon-btn" />

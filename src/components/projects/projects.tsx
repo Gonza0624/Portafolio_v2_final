@@ -26,7 +26,7 @@ const Projects = () => {
   return (
     <>
       <div id="projects" className="projects-section__row">
-        <Fade triggerOnce direction="left" delay={100} damping={0.1}>
+        <Fade triggerOnce direction="left" delay={300} damping={0.1}>
           <div className="projects-section__box projects-section__card">
             <div style={poke} className="projects-section__wrapper">
               <div className="data">
@@ -48,7 +48,7 @@ const Projects = () => {
             </div>
           </div>
         </Fade>
-        <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+        <Fade triggerOnce direction="left" delay={300} damping={0.1}>
           <div className="projects-section__box projects-section__card">
             <div style={ecommerce} className="projects-section__wrapper">
               <div className="data">
@@ -71,7 +71,7 @@ const Projects = () => {
             </div>
           </div>
         </Fade>
-        <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+        <Fade triggerOnce direction="left" delay={300} damping={0.1}>
           <div className="projects-section__box projects-section__card">
             <div style={rick} className="projects-section__wrapper">
               <div className="data">
@@ -96,7 +96,7 @@ const Projects = () => {
             </div>
           </div>
         </Fade>
-        <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+        <Fade triggerOnce direction="left" delay={300} damping={0.1}>
           <div className="projects-section__box projects-section__card">
             <div style={portfolio_v1} className="projects-section__wrapper">
               <div className="data">

@@ -18,6 +18,7 @@ $black: #000;
   &__row {
     width: 100%;
     margin: auto 0;
+    margin: 100px 0px;
     @include mixin.flex(center);
     display: grid;
     grid-template-columns: 400px 400px 400px;

@@ -2,6 +2,7 @@ import pokeimg from "../../assets/projects-img/poke.webp";
 import fondo from "../../assets/projects-img/ecommerce.webp";
 import rickimg from "../../assets/projects-img/rick2.webp";
 import portfolio_v1_img from "../../assets/projects-img/robot.webp";
+import crud_img from "../../assets/projects-img/crud.webp";
 import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
@@ -21,6 +22,12 @@ const Projects = () => {
   const portfolio_v1 = {
     backgroundImage: `url(${portfolio_v1_img})`,
     backgroundSize: "contain",
+  };
+  const crud = {
+    backgroundImage: `url(${crud_img})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+
   };
 
   return (
@@ -112,6 +119,28 @@ const Projects = () => {
                   <p className="text">
                     "this was the first version of my portfolio made during my
                     internship at globant using react, javascript and sass"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Fade>
+        <Fade triggerOnce direction="left" delay={300} damping={0.1}>
+          <div className="projects-section__box projects-section__card">
+            <div style={crud} className="projects-section__wrapper">
+              <div className="data">
+                <div className="content">
+                  <a
+                    target={"_blank"}
+                    className="projects-section__repo"
+                    href={"https://github.com/Gonza0624/crud_react_ts"}
+                  >
+                    Repository »
+                  </a>
+                  <h1 className="projects-section__title">User CRUD</h1>
+                  <p className="text">
+                    "User crud made with react, typescript, bootstrap, axios and
+                    an api built in express and mysql"
                   </p>
                 </div>
               </div>

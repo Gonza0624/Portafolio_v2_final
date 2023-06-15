@@ -3,6 +3,7 @@ import fondo from "../../assets/projects-img/ecommerce.webp";
 import rickimg from "../../assets/projects-img/rick2.webp";
 import portfolio_v1_img from "../../assets/projects-img/robot.webp";
 import crud_img from "../../assets/projects-img/crud.webp";
+import gifs_img from "../../assets/projects-img/gifs.jpeg";
 import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
@@ -27,7 +28,10 @@ const Projects = () => {
     backgroundImage: `url(${crud_img})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-
+  };
+  const gifs = {
+    backgroundImage: `url(${gifs_img})`,
+    backgroundSize: "cover",
   };
 
   return (
@@ -141,6 +145,28 @@ const Projects = () => {
                   <p className="text">
                     "User crud made with react, typescript, bootstrap, axios and
                     an api built in express and mysql"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Fade>
+        <Fade triggerOnce direction="left" delay={300} damping={0.1}>
+          <div className="projects-section__box projects-section__card">
+            <div style={gifs} className="projects-section__wrapper">
+              <div className="data">
+                <div className="content">
+                  <a
+                    target={"_blank"}
+                    className="projects-section__repo"
+                    href={"https://github.com/Gonza0624/Gifs-App-Angular"}
+                  >
+                    Repository »
+                  </a>
+                  <h1 className="projects-section__title">Gifs App Angular</h1>
+                  <p className="text">
+                    "Gifs search application made with angular and local
+                    storage for data persistence"
                   </p>
                 </div>
               </div>

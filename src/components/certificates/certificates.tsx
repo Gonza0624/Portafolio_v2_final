@@ -1,9 +1,9 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import globant from "../../assets/certificates/globant.webp";
 import bootcamp from "../../assets/certificates/bootcamp.webp";
 import sena from "../../assets/certificates/titulo_sena.webp";
-import Slider from "react-slick";
 
 const settings = {
   dots: true,

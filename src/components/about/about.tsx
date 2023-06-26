@@ -38,7 +38,7 @@ const About = () => {
           >
             <p className="about-section__paragraph">
               I am <span className="about-section__span">Gonzalo Salazar</span>,
-              I am 20 years old, I did a technologist in the training program of
+              I am 21 years old, I did a technologist in the training program of
               analysis and software development at{" "}
               <span className="about-section__span">Sena</span>, I did my
               internship with{" "}

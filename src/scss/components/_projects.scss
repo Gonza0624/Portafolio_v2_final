@@ -7,13 +7,33 @@ $light-blue: #828092;
 $white: #fff;
 $black: #000;
 
+.prueba {
+  overflow-x: hidden;
+}
+
 .projects-section {
   @include mixin.flex(center);
   margin: auto;
   width: 100%;
   margin-top: 80px;
   margin-bottom: 60px;
-  height: auto;
+  height: 100%;
+
+  &__title {
+    font-size: 3.3rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--title-color);
+    @media screen and (max-width: 740px) {
+      & {
+        font-size: 1.9rem;
+      }
+    }
+  }
+
+  &__title-color {
+    color: var(--main-color);
+  }
 
   &__row {
     width: 100%;
@@ -21,28 +41,48 @@ $black: #000;
     margin: 100px 0px;
     @include mixin.flex(center);
     display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: 1000px;
     gap: 50px;
-    @media screen and (max-width: 1300px) {
+
+    @media screen and (max-width: 1100px) {
       & {
         display: grid;
-        grid-template-columns: 400px 400px;
+        grid-template-columns: 800px;
       }
     }
-    @media screen and (max-width: 850px) {
+
+    @media screen and (max-width: 900px) {
       & {
         display: grid;
-        grid-template-columns: 400px;
+        grid-template-columns: 700px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      & {
+        display: grid;
+        grid-template-columns: 600px;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      & {
+        display: grid;
+        grid-template-columns: 500px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        display: grid;
+        grid-template-columns: 430px;
       }
     }
 
     @media screen and (max-width: 376px) {
       & {
-        @include mixin.flex(center);
-        flex-direction: column;
-        grid-template-columns: 300px;
-        width: 100%;
-        margin: 20px 0px;
+        display: grid;
+        grid-template-columns: 380px;
       }
     }
   }
@@ -52,7 +92,7 @@ $black: #000;
     font-size: 12px;
   }
 
-  &__title {
+  &__title-card {
     font-weight: 300;
     margin: 15px 0px;
     color: #fff;
@@ -74,10 +114,11 @@ $black: #000;
 
   &__wrapper {
     background-color: $white;
+    margin: 30px;
     min-height: 540px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     &:hover {
       .data {
         transform: translateY(0);

@@ -3,7 +3,7 @@
 
 .main-skills-section {
   @include mixin.flex(center);
-  height: 100vh;
+  height: 110vh;
   background-color: var(--white);
   padding: 20px;
   flex-direction: column;

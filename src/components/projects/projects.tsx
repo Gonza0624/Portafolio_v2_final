@@ -14,8 +14,12 @@ import gifs_img_cel from "../../assets/projects-img/gifs_cel.png";
 import country_img from "../../assets/projects-img/country_app.png";
 import country_cel from "../../assets/projects-img/country_app_cel.png";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
+  const { t } = useTranslation("projects");
+
   const [crudImg, setCrudImg] = useState<string>("");
   useEffect(() => {
     const updateImage = () => {
@@ -139,165 +143,151 @@ const Projects = () => {
       <div id="projects" className="projects-section__row">
         <div>
           <p className="projects-section__title">
-            My <span className="projects-section__title-color">projects</span>{" "}
+            {t("title")}{" "}
+            <span className="projects-section__title-color">{t("title2")}</span>{" "}
           </p>
         </div>
-        <Slider {...settings}>
-          <div className="projects-section__box projects-section__card">
-            <div style={ecommerce} className="projects-section__wrapper">
-              <div className="data">
-                <div className="content">
-                  <a
-                    target={"_blank"}
-                    className="projects-section__repo"
-                    href={"https://github.com/Gonza0624/proyectoEcommerce"}
-                  >
-                    Repository »
-                  </a>
-                  <h1 className="projects-section__title-card">Ecommerce</h1>
-                  <p className="text">
-                    "Functional Ecommerce made with Laravel, Bootstrap and
-                    MySQL, contains product catalog, detail, shopping cart,
-                    admin dashboard etc."
-                  </p>
+        <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+          <Slider {...settings}>
+            <div className="projects-section__box projects-section__card">
+              <div style={ecommerce} className="projects-section__wrapper">
+                <div className="data">
+                  <div className="content">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/proyectoEcommerce"}
+                    >
+                      {t("repository")} »
+                    </a>
+                    <h1 className="projects-section__title-card">
+                      {t("ecommerce")}
+                    </h1>
+                    <p className="text">{t("ecommerceParagraph")}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="projects-section__box projects-section__card">
-            <div style={poke} className="projects-section__wrapper">
-              <div className="data">
-                <div className="content">
-                  <a
-                    target={"_blank"}
-                    className="projects-section__repo"
-                    href={"https://github.com/Gonza0624/pokemon-project"}
-                  >
-                    Repository »
-                  </a>
-                  <h1 className="projects-section__title-card">Pokedex</h1>
-                  <p className="text">
-                    "Application made with react native, consuming the pokemon
-                    api to show the characters and their details."
-                  </p>
+            <div className="projects-section__box projects-section__card">
+              <div style={poke} className="projects-section__wrapper">
+                <div className="data">
+                  <div className="content">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/pokemon-project"}
+                    >
+                      {t("repository")} »
+                    </a>
+                    <h1 className="projects-section__title-card">Pokedex</h1>
+                    <p className="text">{t("pokedexParagraph")}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="projects-section__box projects-section__card">
-            <div
-              style={{
-                ...rick,
-                backgroundPosition: position,
-              }}
-              className="projects-section__wrapper"
-            >
-              <div className="data">
-                <div className="content">
-                  <a
-                    target={"_blank"}
-                    className="projects-section__repo"
-                    href={"https://github.com/Gonza0624/Rick-And-Morty-API"}
-                  >
-                    Repository »
-                  </a>
-                  <h1 className="projects-section__title-card">
-                    Rick and morty api
-                  </h1>
-                  <p className="text">
-                    "project made with react, typescript, css for the
-                    consumption of the api of rick and morty where each of the
-                    characters are shown with their details and page layout."
-                  </p>
+            <div className="projects-section__box projects-section__card">
+              <div
+                style={{
+                  ...rick,
+                  backgroundPosition: position,
+                }}
+                className="projects-section__wrapper"
+              >
+                <div className="data">
+                  <div className="content">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/Rick-And-Morty-API"}
+                    >
+                      {t("repository")} »
+                    </a>
+                    <h1 className="projects-section__title-card">
+                      {t("rickTitle")}
+                    </h1>
+                    <p className="text">{t("rickParagraph")}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="projects-section__box projects-section__card">
-            <div style={portfolio_v1} className="projects-section__wrapper">
-              <div className="data">
-                <div className="content">
-                  <a
-                    target={"_blank"}
-                    className="projects-section__repo"
-                    href={"https://github.com/Gonza0624/portafolio_v1"}
-                  >
-                    Repository »
-                  </a>
-                  <h1 className="projects-section__title-card">Portfolio V1</h1>
-                  <p className="text">
-                    "this was the first version of my portfolio made during my
-                    internship at globant using react, javascript and sass"
-                  </p>
+            <div className="projects-section__box projects-section__card">
+              <div style={portfolio_v1} className="projects-section__wrapper">
+                <div className="data">
+                  <div className="content">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/portafolio_v1"}
+                    >
+                      {t("repository")} »
+                    </a>
+                    <h1 className="projects-section__title-card">
+                      {t("portfolioTitle")}
+                    </h1>
+                    <p className="text">{t("portfolioParagraph")}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="projects-section__box projects-section__card">
-            <div style={crud} className="projects-section__wrapper">
-              <div className="data">
-                <div className="content">
-                  <a
-                    target={"_blank"}
-                    className="projects-section__repo"
-                    href={"https://github.com/Gonza0624/crud_react_ts"}
-                  >
-                    Repository »
-                  </a>
-                  <h1 className="projects-section__title-card">User CRUD</h1>
-                  <p className="text">
-                    "User crud made with react, typescript, bootstrap, axios and
-                    an api built in express and mysql"
-                  </p>
+            <div className="projects-section__box projects-section__card">
+              <div style={crud} className="projects-section__wrapper">
+                <div className="data">
+                  <div className="content">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/crud_react_ts"}
+                    >
+                      {t("repository")} »
+                    </a>
+                    <h1 className="projects-section__title-card">
+                      {t("userCrudTitle")}
+                    </h1>
+                    <p className="text">{t("userCrudParagraph")}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="projects-section__box projects-section__card">
-            <div style={gifs} className="projects-section__wrapper">
-              <div className="data">
-                <div className="content">
-                  <a
-                    target={"_blank"}
-                    className="projects-section__repo"
-                    href={"https://github.com/Gonza0624/Gifs-App-Angular"}
-                  >
-                    Repository »
-                  </a>
-                  <h1 className="projects-section__title-card">
-                    Gifs App Angular
-                  </h1>
-                  <p className="text">
-                    "Gifs search application made with angular and local storage
-                    for data persistence"
-                  </p>
+            <div className="projects-section__box projects-section__card">
+              <div style={gifs} className="projects-section__wrapper">
+                <div className="data">
+                  <div className="content">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/Gifs-App-Angular"}
+                    >
+                      {t("repository")} »
+                    </a>
+                    <h1 className="projects-section__title-card">
+                      {t("gifsTitle")}
+                    </h1>
+                    <p className="text">{t("gifsParagraph")}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="projects-section__box projects-section__card">
-            <div style={countryImg} className="projects-section__wrapper">
-              <div className="data">
-                <div className="content">
-                  <a
-                    target={"_blank"}
-                    className="projects-section__repo"
-                    href={"https://github.com/Gonza0624/country_app"}
-                  >
-                    Repository »
-                  </a>
-                  <h1 className="projects-section__title-card">
-                    Country App Angular
-                  </h1>
-                  <p className="text">
-                    "Angular application for country search by country, region
-                    or capital using the REST Countries API"
-                  </p>
+            <div className="projects-section__box projects-section__card">
+              <div style={countryImg} className="projects-section__wrapper">
+                <div className="data">
+                  <div className="content">
+                    <a
+                      target={"_blank"}
+                      className="projects-section__repo"
+                      href={"https://github.com/Gonza0624/country_app"}
+                    >
+                      {t("repository")} »
+                    </a>
+                    <h1 className="projects-section__title-card">
+                      {t("countryTitle")}
+                    </h1>
+                    <p className="text">{t("countryParagraph")}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Slider>
+          </Slider>
+        </Fade>
       </div>
     </div>
   );

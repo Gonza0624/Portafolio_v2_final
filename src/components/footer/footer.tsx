@@ -1,6 +1,8 @@
 import { social } from "../navigation/data";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation("footer");
   return (
     <section className="section-main">
       <footer>
@@ -17,9 +19,7 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className="section-main__row">
-            Copyright © 2023 - All rights reserved || Designed By: Gonzalo
-          </div>
+          <div className="section-main__row">{t("title")}</div>
         </div>
       </footer>
     </section>

@@ -8,8 +8,10 @@ import { ToastContainer, toast, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = (): JSX.Element => {
+  const { t } = useTranslation("contact");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const initialValues = {
@@ -19,11 +21,9 @@ const ContactForm = (): JSX.Element => {
   };
 
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required("* Name is required"),
-    email: Yup.string()
-      .email("* The email is not valid")
-      .required("* Email is required"),
-    message: Yup.string().required("* The message is required"),
+    name: Yup.string().required(t("nameValidation")),
+    email: Yup.string().email(t("emailError")).required(t("emailValidation")),
+    message: Yup.string().required(t("messageValidation")),
   });
 
   const handleSubmit = async (
@@ -49,7 +49,7 @@ const ContactForm = (): JSX.Element => {
         "eHfPslcOnvpe7Kjxb"
       );
 
-      toast.success("El mensaje se ha enviado correctamente", {
+      toast.success(t("toastSuccess"), {
         position: "bottom-right",
         autoClose: 1000,
         hideProgressBar: false,
@@ -62,7 +62,7 @@ const ContactForm = (): JSX.Element => {
       resetForm();
     } catch (error) {
       console.error(error);
-      toast.error("Ocurrió un error al enviar el mensaje", {
+      toast.error(t("toastError"), {
         position: "bottom-right",
         autoClose: 1000,
         hideProgressBar: false,
@@ -89,11 +89,12 @@ const ContactForm = (): JSX.Element => {
           return (
             <Form className="contact-section__form">
               <h1 className="contact-section__title">
-                Contact <span className="contact-section__title-color">me</span>{" "}
+                {t("title")}
+                <span className="contact-section__title-color">
+                  {t("title2")}
+                </span>{" "}
               </h1>
-              <span className="contact-section__link">
-                The message will be sent to my email address
-              </span>
+              <span className="contact-section__link">{t("message")}</span>
               <Fade
                 className="contact-section__form-row"
                 triggerOnce
@@ -107,7 +108,7 @@ const ContactForm = (): JSX.Element => {
                     name="name"
                     type="text"
                     className="contact-section__form-input"
-                    placeholder="Name"
+                    placeholder={t("name")}
                   />
                   <ErrorMessage
                     name="name"
@@ -129,7 +130,7 @@ const ContactForm = (): JSX.Element => {
                     name="email"
                     type="email"
                     className="contact-section__form-input"
-                    placeholder="email"
+                    placeholder={t("email")}
                   />
                   <ErrorMessage
                     name="email"
@@ -151,7 +152,7 @@ const ContactForm = (): JSX.Element => {
                     name="message"
                     as="textarea"
                     className="contact-section__form-input"
-                    placeholder="message"
+                    placeholder={t("messageInput")}
                   />
                   <ErrorMessage
                     name="message"
@@ -174,7 +175,7 @@ const ContactForm = (): JSX.Element => {
                     !(dirty && isValid) ? "disabled-btn" : "actived-btn"
                   }
                 >
-                  {isSubmitting ? "Sending..." : "Send message"}
+                  {isSubmitting ? t("btnSending") : t("btn")}
                 </button>
               </Fade>
               <ToastContainer />

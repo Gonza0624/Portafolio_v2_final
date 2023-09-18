@@ -6,6 +6,9 @@
 @use "scss/base/reset";
 @use "scss/base/base";
 
+// language switcher
+@use "scss/components/languageSwitcher.scss";
+
 // barra de navegacion
 @use "scss/components/navigation.scss";
 

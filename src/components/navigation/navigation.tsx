@@ -7,10 +7,14 @@ import { links, social } from "./data";
 import { Link } from "react-scroll";
 import { Within } from "@theme-toggles/react";
 import { ThemeContext } from "../themeContext/themeContext";
+import LanguageSwitcher from "../languageSwitcher/languageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export interface INavbar {}
 
 const Navbar: React.FC<INavbar> = (): React.ReactElement => {
+  const { t } = useTranslation("nav");
+
   // mostrar los link de la barra de navegacion y los iconos
   const [showLinks, setShowLinks] = useState<boolean>(false);
   const linksContainerRef = useRef<any>(null);
@@ -68,44 +72,105 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
     >
       <div className="nav-center">
         <div className="nav-header">
-          <figure className="container-logo">
-            <img className="logo" src={logo} alt="" />
-            <p className="brand">onzalo</p>
-          </figure>
-          <div className="container-theme-btn">
-            <Within
-              className="theme-btn"
-              onToggle={toggleTheme}
-              duration={750}
-            />
-          </div>
+          <div className="nav-div">
+            <figure className="container-logo">
+              <img className="logo" src={logo} alt="" />
+              <p className="brand">onzalo</p>
+            </figure>
+
+            <div className="container-theme-btn">
+              <Within
+                className="theme-btn"
+                onToggle={toggleTheme}
+                duration={750}
+              />
+            </div>
+            <div className="container-language">
+              <LanguageSwitcher />
+            </div>
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}
           >
             <FaBars />
           </button>
+          </div>
         </div>
 
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <Link
-                    to={url}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={200}
-                    className="links"
-                  >
-                    {text}
-                  </Link>
-                </li>
-              );
-            })}
+            <li>
+              <Link
+                to={"home"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={200}
+                className="links"
+              >
+                {t("home")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"about"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={200}
+                className="links"
+              >
+                {t("about")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"skills"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={200}
+                className="links"
+              >
+                {t("skills")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"projects"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={200}
+                className="links"
+              >
+                {t("projects")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"contact"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={200}
+                className="links"
+              >
+                {t("contact")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"certificates"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={200}
+                className="links"
+              >
+                {t("certificates")}
+              </Link>
+            </li>
           </ul>
         </div>
 

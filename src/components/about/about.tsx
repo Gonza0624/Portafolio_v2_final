@@ -1,6 +1,7 @@
 import image from "../../assets/about-img/code.webp";
 import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
+import { useTranslation } from "react-i18next";
 
 const customAnimation = keyframes`
   from {
@@ -15,6 +16,7 @@ const customAnimation = keyframes`
 `;
 
 const About = () => {
+  const { t } = useTranslation("about");
   return (
     <section id="about" className="about-section">
       <div className="about-section__card">
@@ -27,7 +29,8 @@ const About = () => {
             keyframes={customAnimation}
           >
             <p className="about-section__title">
-              About <span className="about-section__title-color">Me</span>{" "}
+              {t("title")}{" "}
+              <span className="about-section__title-color">{t("title2")}</span>{" "}
             </p>
           </Reveal>
           <Reveal
@@ -36,19 +39,7 @@ const About = () => {
             damping={0.1}
             keyframes={customAnimation}
           >
-            <p className="about-section__paragraph">
-              I am <span className="about-section__span">Gonzalo Salazar</span>,
-              I am 21 years old, I did a technologist in the training program of
-              analysis and software development at{" "}
-              <span className="about-section__span">Sena</span>, I did my
-              internship with{" "}
-              <span className="about-section__span">Globant</span> fulfilling
-              the role of{" "}
-              <span className="about-section__span">Web UI developer</span>, I
-              am a responsible, organized, creative person, I am also a fast
-              learner and I adapt to any situation, eager to learn and grow in
-              the future personally and professionally.
-            </p>
+            <p className="about-section__paragraph">{t("paragraph")}</p>
           </Reveal>
         </div>
       </div>

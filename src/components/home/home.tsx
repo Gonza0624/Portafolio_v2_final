@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import fondo1 from "../../assets/backgrounds/fondo.webp";
 import fondo2 from "../../assets/backgrounds/fondo2.webp";
-import image from "../../assets/projects-img/home-image.webp";
+import image from "../../assets/projects-img/home.svg";
 import { ImArrowRight2 } from "react-icons/im";
 import { Fade } from "react-awesome-reveal";
 import { ThemeContext } from "../themeContext/themeContext";
+import { useTranslation } from "react-i18next";
 
 const Home: React.FC = () => {
   const { theme } = useContext(ThemeContext);
+  const { t } = useTranslation("home");
 
   const home_bg = {
     backgroundImage: `url(${theme === "light" ? fondo1 : fondo2})`,
@@ -26,16 +28,10 @@ const Home: React.FC = () => {
           <div className="home-section__container-text">
             <Fade direction="left" delay={50} damping={1}>
               <h1 className="home-section__title">
-                Hello{" "}
-                <span className="home-section__title-color">
-                  my name is Gonzalo
-                </span>
+                {t("title")}{" "}
+                <span className="home-section__title-color">{t("name")}</span>
               </h1>
-              <p className="home-section__paragraph">
-                Welcome to my portfolio! I am a passionate software developer
-                with a love for technology and programming, and here you can see
-                some of my latest work.
-              </p>
+              <p className="home-section__paragraph">{t("paragraph")}</p>
             </Fade>
             <Fade direction="left" delay={50} damping={9}>
               <div className="home-section__container-btn">
@@ -45,7 +41,8 @@ const Home: React.FC = () => {
                   href="https://drive.google.com/file/d/1-ptEMtEmUhXjeMgDoPSpOpXzYKM9n-08/view"
                   className="home-section__btn"
                 >
-                  My resume <ImArrowRight2 className="home-section__icon-btn" />
+                  {t("textBtn")}{" "}
+                  <ImArrowRight2 className="home-section__icon-btn" />
                 </a>
               </div>
             </Fade>

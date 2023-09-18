@@ -1,6 +1,7 @@
 import image2 from "../../assets/about-img/code2.webp";
 import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
+import { useTranslation } from "react-i18next";
 
 const customAnimation = keyframes`
   from {
@@ -15,6 +16,7 @@ const customAnimation = keyframes`
 `;
 
 const Objective = () => {
+  const { t } = useTranslation("objective");
   return (
     <section id="objective" className="objective-section">
       <div className="objective-section__card">
@@ -26,8 +28,10 @@ const Objective = () => {
             keyframes={customAnimation}
           >
             <p className="objective-section__title">
-              My{" "}
-              <span className="objective-section__title-color">objective</span>{" "}
+              {t("title")}{" "}
+              <span className="objective-section__title-color">
+                {t("title2")}
+              </span>{" "}
             </p>
           </Reveal>
           <Reveal
@@ -36,12 +40,7 @@ const Objective = () => {
             damping={0.1}
             keyframes={customAnimation}
           >
-            <p className="objective-section__paragraph">
-              I am looking for a good teamwork environment, where I can improve
-              my programming skills, gain experience, learn different ways to
-              solve problems through new challenges, deepen both front end
-              development and gain skills in backend and design.
-            </p>
+            <p className="objective-section__paragraph">{t("paragraph")}</p>
           </Reveal>
         </div>
         <img src={image2} alt="" />

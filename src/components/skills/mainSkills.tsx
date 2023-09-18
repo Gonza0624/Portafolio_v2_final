@@ -10,14 +10,21 @@ import php from "../../assets/skills/php.webp";
 import laravel from "../../assets/skills/laravel.webp";
 import bootstrap from "../../assets/skills/bootstrap.webp";
 import mysql from "../../assets/skills/mysql.webp";
+import angular from "../../assets/skills/angular.webp";
+import next from "../../assets/skills/next.svg";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 const MainSkills = () => {
+  const { t } = useTranslation("skills");
   return (
     <section id="skills" className="main-skills-section">
       <div>
         <p className="main-skills-section__title">
-          Main <span className="main-skills-section__title-color">skills</span>{" "}
+          {t("title")}{" "}
+          <span className="main-skills-section__title-color">
+            {t("title2")}
+          </span>{" "}
         </p>
       </div>
       <div className="main-skills-section__content">
@@ -55,8 +62,8 @@ const MainSkills = () => {
             </Fade>
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>
               <div className="main-skills-section__my-skill">
-                <img className="main-skills-section__img" src={ReactN} />
-                <h4>React Native</h4>
+                <img className="main-skills-section__img" src={angular} />
+                <h4>Angular</h4>
               </div>
             </Fade>
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>

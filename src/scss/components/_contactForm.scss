@@ -17,7 +17,7 @@
     @include mixin.flex(center);
     flex-direction: column;
     width: 550px;
-    padding: 30px;
+    padding: 20px;
     @media screen and (max-width: 550px) {
       & {
         width: 100%;
@@ -85,6 +85,12 @@
 
     &:focus:invalid {
       border-bottom: 3px solid var(--main-color);
+    }
+
+    @media screen and (max-width: 400px) {
+      & {
+        padding: 15px;
+      }
     }
   }
 

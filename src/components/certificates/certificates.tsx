@@ -10,7 +10,9 @@ import { Fade } from "react-awesome-reveal";
 const settings = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 1200,
+  autoplay: true,
+  autoplaySpeed: 1800,
   slidesToShow: 1,
   slidesToScroll: 1,
 };

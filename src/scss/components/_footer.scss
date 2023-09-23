@@ -20,6 +20,10 @@
     font-size: 0.8em;
   }
 
+  &__row {
+    padding: 0 20px;
+  }
+
   &__footer &__row a {
     display: none;
     text-decoration: none;

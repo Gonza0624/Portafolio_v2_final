@@ -1,296 +1,361 @@
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import pokeimg from "../../assets/projects-img/poke.webp";
-import eccom from "../../assets/projects-img/ecommerce.webp";
-import rickimg_cel from "../../assets/projects-img/rick2.webp";
-import rickimg from "../../assets/projects-img/rickandmorty.png";
-import portfolio_v1_img from "../../assets/projects-img/portfolio1.png";
-import portfolio_v1_img_cel from "../../assets/projects-img/portfolio1_cel.png";
-import crud_img from "../../assets/projects-img/crud.png";
-import crud_img_cel from "../../assets/projects-img/crud.webp";
-import gifs_img from "../../assets/projects-img/gifs-img.png";
-import gifs_img_cel from "../../assets/projects-img/gifs_cel.png";
-import country_img from "../../assets/projects-img/country_app.png";
-import country_cel from "../../assets/projects-img/country_app_cel.png";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { AiFillGithub } from "react-icons/ai";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
-const Projects = () => {
+// iconos
+import html from "../../assets/skills/html.webp";
+import js from "../../assets/skills/js.webp";
+import css from "../../assets/skills/css.webp";
+import react from "../../assets/skills/react.webp";
+import git from "../../assets/skills/git.webp";
+import sass from "../../assets/skills/sass.webp";
+import typeScript from "../../assets/skills/typeScript.webp";
+import php from "../../assets/skills/php.webp";
+import laravel from "../../assets/skills/laravel.webp";
+import bootstrap from "../../assets/skills/bootstrap.webp";
+import mysql from "../../assets/skills/mysql.webp";
+import angular from "../../assets/skills/angular.webp";
+
+// imagenes del ecommerce
+import ecom1 from "../../assets/projects-img/ecommerce/ecom_1.webp";
+import ecom2 from "../../assets/projects-img/ecommerce/ecom_2.webp";
+import ecom3 from "../../assets/projects-img/ecommerce/ecom_3.webp";
+import ecom4 from "../../assets/projects-img/ecommerce/ecom_4.webp";
+import ecom5 from "../../assets/projects-img/ecommerce/ecom_5.webp";
+import ecom6 from "../../assets/projects-img/ecommerce/ecom_6.webp";
+import ecom7 from "../../assets/projects-img/ecommerce/ecom_7.webp";
+import ecom8 from "../../assets/projects-img/ecommerce/ecom_8.webp";
+
+// imagenes del portafolio version 1
+import portafolio1 from "../../assets/projects-img/portfolio_v1/portfolio_1.webp";
+import portafolio2 from "../../assets/projects-img/portfolio_v1/portfolio_2.webp";
+import portafolio3 from "../../assets/projects-img/portfolio_v1/portfolio_3.webp";
+import portafolio4 from "../../assets/projects-img/portfolio_v1/portfolio_4.webp";
+import portafolio5 from "../../assets/projects-img/portfolio_v1/portfolio_5.webp";
+
+// imagenes del portafolio version final
+import portafolio_final1 from "../../assets/projects-img/portfolio_final/portafolio_final_1.webp";
+import portafolio_final2 from "../../assets/projects-img/portfolio_final/portafolio_final_2.webp";
+
+// imagenes de rick and morty
+import rickandmorty1 from "../../assets/projects-img/rickandmorty/rickandmorty_1.webp";
+import rickandmorty2 from "../../assets/projects-img/rickandmorty/rickandmorty_2.webp";
+import rickandmorty3 from "../../assets/projects-img/rickandmorty/rickandmorty_3.webp";
+import rickandmorty4 from "../../assets/projects-img/rickandmorty/rickandmorty_4.webp";
+import rickandmorty5 from "../../assets/projects-img/rickandmorty/rickandmorty_5.webp";
+
+// imagenes de la aplicacion de gifs
+import gifs1 from "../../assets/projects-img/gifsApp/gifsApp_1.webp";
+import gifs2 from "../../assets/projects-img/gifsApp/gifsApp_2.webp";
+import gifs3 from "../../assets/projects-img/gifsApp/gifsApp_3.webp";
+import gifs4 from "../../assets/projects-img/gifsApp/gifsApp_4.webp";
+
+// imagenes de la app de paises
+import country1 from "../../assets/projects-img/countryApp/countryApp_1.webp";
+import country2 from "../../assets/projects-img/countryApp/countryApp_2.webp";
+import country3 from "../../assets/projects-img/countryApp/countryApp_3.webp";
+import country4 from "../../assets/projects-img/countryApp/countryApp_4.webp";
+
+const Projects_2 = () => {
   const { t } = useTranslation("projects");
 
-  const [crudImg, setCrudImg] = useState<string>("");
-  useEffect(() => {
-    const updateImage = () => {
-      const windowWidth = window.innerWidth;
-      if (windowWidth >= 700) {
-        setCrudImg(crud_img);
-      } else {
-        setCrudImg(crud_img_cel);
-      }
-    };
-    updateImage();
-    window.addEventListener("resize", updateImage);
-    return () => window.removeEventListener("resize", updateImage);
-  }, []);
+  const ecommerce_images = [
+    ecom1,
+    ecom2,
+    ecom3,
+    ecom4,
+    ecom6,
+    ecom5,
+    ecom7,
+    ecom8,
+  ];
 
-  const [rickImg, setRickImg] = useState<string>("");
-  const [position, setPosition] = useState<string>("");
-  useEffect(() => {
-    const updateImage = () => {
-      const windowWidth = window.innerWidth;
-      if (windowWidth >= 800) {
-        setRickImg(rickimg);
-        setPosition("center");
-      } else {
-        setRickImg(rickimg_cel);
-        setPosition("right");
-      }
-    };
-    updateImage();
-    window.addEventListener("resize", updateImage);
-    return () => window.removeEventListener("resize", updateImage);
-  }, []);
+  const portfolio_images = [
+    portafolio1,
+    portafolio2,
+    portafolio3,
+    portafolio4,
+    portafolio5,
+  ];
 
-  const [gifsImg, setGifsImg] = useState<string>("");
-  useEffect(() => {
-    const updateImage = () => {
-      const windowWidth = window.innerWidth;
-      if (windowWidth >= 700) {
-        setGifsImg(gifs_img);
-      } else {
-        setGifsImg(gifs_img_cel);
-      }
-    };
-    updateImage();
-    window.addEventListener("resize", updateImage);
-    return () => window.removeEventListener("resize", updateImage);
-  }, []);
+  const portfolio_final_images = [portafolio_final1, portafolio_final2];
 
-  const [portfolio, setPortfolio] = useState<string>("");
-  useEffect(() => {
-    const updateImage = () => {
-      const windowWidth = window.innerWidth;
-      if (windowWidth >= 700) {
-        setPortfolio(portfolio_v1_img);
-      } else {
-        setPortfolio(portfolio_v1_img_cel);
-      }
-    };
-    updateImage();
-    window.addEventListener("resize", updateImage);
-    return () => window.removeEventListener("resize", updateImage);
-  }, []);
+  const rickandmorty_images = [
+    rickandmorty1,
+    rickandmorty2,
+    rickandmorty3,
+    rickandmorty4,
+    rickandmorty5,
+  ];
 
-  const [country, setCountry] = useState<string>("");
-  useEffect(() => {
-    const updateImage = () => {
-      const windowWidth = window.innerWidth;
-      if (windowWidth >= 1000) {
-        setCountry(country_img);
-      } else {
-        setCountry(country_cel);
-      }
-    };
-    updateImage();
-    window.addEventListener("resize", updateImage);
-    return () => window.removeEventListener("resize", updateImage);
-  }, []);
+  const gifs_images = [gifs1, gifs2, gifs3, gifs4];
 
-  const ecommerce = {
-    backgroundImage: `url(${eccom})`,
-    backgroundSize: "cover",
-  };
-  const poke = {
-    backgroundImage: `url(${pokeimg})`,
-    backgroundSize: "cover",
-  };
-  const rick = {
-    backgroundImage: `url(${rickImg})`,
-    backgroundSize: "cover",
-  };
-  const portfolio_v1 = {
-    backgroundImage: `url(${portfolio})`,
-    backgroundSize: "cover",
-  };
-  const crud = {
-    backgroundImage: `url(${crudImg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
-  const gifs = {
-    backgroundImage: `url(${gifsImg})`,
-    backgroundSize: "cover",
-  };
-
-  const countryImg = {
-    backgroundImage: `url(${country})`,
-    backgroundSize: "cover",
-    backgroundPosition: "left",
-  };
+  const countries_images = [country1, country2, country3, country4];
 
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 1800,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
 
   return (
-    <div className="prueba">
-      <div id="projects" className="projects-section__row">
-        <div>
-          <p className="projects-section__title">
-            {t("title")}{" "}
-            <span className="projects-section__title-color">{t("title2")}</span>{" "}
-          </p>
-        </div>
-        <Fade triggerOnce direction="left" delay={50} damping={0.1}>
-          <Slider {...settings}>
-            <div className="projects-section__box projects-section__card">
-              <div style={ecommerce} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/proyectoEcommerce"}
-                    >
-                      {t("repository")} »
-                    </a>
-                    <h1 className="projects-section__title-card">
-                      {t("ecommerce")}
-                    </h1>
-                    <p className="text">{t("ecommerceParagraph")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="projects-section__box projects-section__card">
-              <div style={poke} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/pokemon-project"}
-                    >
-                      {t("repository")} »
-                    </a>
-                    <h1 className="projects-section__title-card">Pokedex</h1>
-                    <p className="text">{t("pokedexParagraph")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="projects-section__box projects-section__card">
-              <div
-                style={{
-                  ...rick,
-                  backgroundPosition: position,
-                }}
-                className="projects-section__wrapper"
-              >
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/Rick-And-Morty-API"}
-                    >
-                      {t("repository")} »
-                    </a>
-                    <h1 className="projects-section__title-card">
-                      {t("rickTitle")}
-                    </h1>
-                    <p className="text">{t("rickParagraph")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="projects-section__box projects-section__card">
-              <div style={portfolio_v1} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/portafolio_v1"}
-                    >
-                      {t("repository")} »
-                    </a>
-                    <h1 className="projects-section__title-card">
-                      {t("portfolioTitle")}
-                    </h1>
-                    <p className="text">{t("portfolioParagraph")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="projects-section__box projects-section__card">
-              <div style={crud} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/crud_react_ts"}
-                    >
-                      {t("repository")} »
-                    </a>
-                    <h1 className="projects-section__title-card">
-                      {t("userCrudTitle")}
-                    </h1>
-                    <p className="text">{t("userCrudParagraph")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="projects-section__box projects-section__card">
-              <div style={gifs} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/Gifs-App-Angular"}
-                    >
-                      {t("repository")} »
-                    </a>
-                    <h1 className="projects-section__title-card">
-                      {t("gifsTitle")}
-                    </h1>
-                    <p className="text">{t("gifsParagraph")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="projects-section__box projects-section__card">
-              <div style={countryImg} className="projects-section__wrapper">
-                <div className="data">
-                  <div className="content">
-                    <a
-                      target={"_blank"}
-                      className="projects-section__repo"
-                      href={"https://github.com/Gonza0624/country_app"}
-                    >
-                      {t("repository")} »
-                    </a>
-                    <h1 className="projects-section__title-card">
-                      {t("countryTitle")}
-                    </h1>
-                    <p className="text">{t("countryParagraph")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Slider>
-        </Fade>
+    <div id="projects" className="projects-section">
+      <div>
+        <p className="projects-section__main-title">
+          {t("title")}{" "}
+          <span className="projects-section__span">{t("title2")}</span>{" "}
+        </p>
       </div>
+
+      <Fade triggerOnce delay={400} damping={0.1}>
+        <div className="projects-section__content">
+          <div className="projects-section__description-project">
+            <h1 className="projects-section__title">
+              {t("ecommerce")}
+              <span className="projects-section__span">{t("ecommerce2")}</span>
+            </h1>
+            <p className="projects-section__paragraph">
+              {t("ecommerceParagraph")}
+            </p>
+            <figure className="projects-section__container-badges">
+              <img className="" src={html} />
+              <img className="" src={css} />
+              <img className="" src={php} />
+              <img className="" src={laravel} />
+              <img className="" src={bootstrap} />
+              <img className="" src={mysql} />
+            </figure>
+            <div className="projects-section__container-btn">
+              <a
+                target="_blank"
+                type="button"
+                href="https://github.com/Gonza0624/"
+                className="projects-section__btn"
+              >
+                {t("repository")}{" "}
+                <AiFillGithub className="projects-section__icon-btn" />
+              </a>
+            </div>
+          </div>
+          <div className="projects-section__img-container">
+            <Slider {...settings}>
+              {ecommerce_images.map((image, index) => (
+                <div key={index}>
+                  <img src={image} alt={`img${index + 1}`} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </Fade>
+      <Fade triggerOnce delay={400} damping={0.1}>
+        <div className="projects-section__content">
+          <div className="projects-section__description-project">
+            <h1 className="projects-section__title">
+              {t("portfolioTitle")}{" "}
+              <span className="projects-section__span">
+                {t("portfolioTitle2")}
+              </span>
+            </h1>
+            <p className="projects-section__paragraph">
+              {t("portfolioParagraph")}
+            </p>
+            <figure className="projects-section__container-badges">
+              <img className="" src={react} />
+              <img className="" src={js} />
+              <img className="" src={css} />
+              <img className="" src={sass} />
+              <img className="" src={git} />
+            </figure>
+            <div className="projects-section__container-btn">
+              <a
+                target="_blank"
+                type="button"
+                href={"https://github.com/Gonza0624/portafolio_v1"}
+                className="projects-section__btn"
+              >
+                {t("repository")}{" "}
+                <AiFillGithub className="projects-section__icon-btn" />
+              </a>
+            </div>
+          </div>
+          <div className="projects-section__img-container">
+            <Slider {...settings}>
+              {portfolio_images.map((image, index) => (
+                <div key={index}>
+                  <img src={image} alt={`img${index + 1}`} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </Fade>
+      <Fade triggerOnce delay={400} damping={0.1}>
+        <div className="projects-section__content">
+          <div className="projects-section__description-project">
+            <h1 className="projects-section__title">
+              {t("portfolioFinalTitle")}{" "}
+              <span className="projects-section__span">
+                {t("portfolioFinalTitle2")}
+              </span>
+            </h1>
+            <p className="projects-section__paragraph">
+              {t("portfolioFinalParagraph")}
+            </p>
+            <figure className="projects-section__container-badges">
+              <img className="" src={react} />
+              <img className="" src={typeScript} />
+              <img className="" src={css} />
+              <img className="" src={sass} />
+              <img className="" src={git} />
+            </figure>
+            <div className="projects-section__container-btn">
+              <a
+                target="_blank"
+                type="button"
+                href={"https://github.com/Gonza0624/Portafolio_v2_final"}
+                className="projects-section__btn"
+              >
+                {t("repository")}{" "}
+                <AiFillGithub className="projects-section__icon-btn" />
+              </a>
+            </div>
+          </div>
+          <div className="projects-section__img-container">
+            <Slider {...settings}>
+              {portfolio_final_images.map((image, index) => (
+                <div key={index}>
+                  <img src={image} alt={`img${index + 1}`} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </Fade>
+      <Fade triggerOnce delay={400} damping={0.1}>
+        <div className="projects-section__content">
+          <div className="projects-section__description-project">
+            <h1 className="projects-section__title">
+              {t("rickTitle")}{" "}
+              <span className="projects-section__span">{t("rickTitle2")}</span>
+            </h1>
+            <p className="projects-section__paragraph">{t("rickParagraph")}</p>
+            <figure className="projects-section__container-badges">
+              <img className="" src={react} />
+              <img className="" src={typeScript} />
+              <img className="" src={css} />
+              <img className="" src={git} />
+            </figure>
+            <div className="projects-section__container-btn">
+              <a
+                target="_blank"
+                type="button"
+                href={"https://github.com/Gonza0624/Rick-And-Morty-API"}
+                className="projects-section__btn"
+              >
+                {t("repository")}{" "}
+                <AiFillGithub className="projects-section__icon-btn" />
+              </a>
+            </div>
+          </div>
+          <div className="projects-section__img-container">
+            <Slider {...settings}>
+              {rickandmorty_images.map((image, index) => (
+                <div key={index}>
+                  <img src={image} alt={`img${index + 1}`} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </Fade>
+      <Fade triggerOnce delay={400} damping={0.1}>
+        <div className="projects-section__content">
+          <div className="projects-section__description-project">
+            <h1 className="projects-section__title">
+              {t("gifsTitle")}{" "}
+              <span className="projects-section__span">{t("gifsTitle2")}</span>
+            </h1>
+            <p className="projects-section__paragraph">{t("gifsParagraph")}</p>
+            <figure className="projects-section__container-badges">
+              <img className="" src={angular} />
+              <img className="" src={typeScript} />
+              <img className="" src={bootstrap} />
+              <img className="" src={git} />
+            </figure>
+            <div className="projects-section__container-btn">
+              <a
+                target="_blank"
+                type="button"
+                href={"https://github.com/Gonza0624/Gifs-App-Angular"}
+                className="projects-section__btn"
+              >
+                {t("repository")}{" "}
+                <AiFillGithub className="projects-section__icon-btn" />
+              </a>
+            </div>
+          </div>
+          <div className="projects-section__img-container">
+            <Slider {...settings}>
+              {gifs_images.map((image, index) => (
+                <div key={index}>
+                  <img src={image} alt={`img${index + 1}`} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </Fade>
+      <Fade triggerOnce delay={400} damping={0.1}>
+        <div className="projects-section__content">
+          <div className="projects-section__description-project">
+            <h1 className="projects-section__title">
+              {t("countryTitle")}{" "}
+              <span className="projects-section__span">
+                {t("countryTitle2")}
+              </span>
+            </h1>
+            <p className="projects-section__paragraph">
+              {t("countryParagraph")}
+            </p>
+            <figure className="projects-section__container-badges">
+              <img className="" src={angular} />
+              <img className="" src={typeScript} />
+              <img className="" src={bootstrap} />
+              <img className="" src={git} />
+            </figure>
+            <div className="projects-section__container-btn">
+              <a
+                target="_blank"
+                type="button"
+                href={"https://github.com/Gonza0624/country_app"}
+                className="projects-section__btn"
+              >
+                {t("repository")}{" "}
+                <AiFillGithub className="projects-section__icon-btn" />
+              </a>
+            </div>
+          </div>
+          <div className="projects-section__img-container">
+            <Slider {...settings}>
+              {countries_images.map((image, index) => (
+                <div key={index}>
+                  <img src={image} alt={`img${index + 1}`} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </Fade>
     </div>
   );
 };
 
-export default Projects;
+export default Projects_2;

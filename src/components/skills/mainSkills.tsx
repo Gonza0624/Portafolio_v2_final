@@ -5,13 +5,11 @@ import react from "../../assets/skills/react.webp";
 import git from "../../assets/skills/git.webp";
 import sass from "../../assets/skills/sass.webp";
 import typeScript from "../../assets/skills/typeScript.webp";
-import ReactN from "../../assets/skills/RN.svg";
 import php from "../../assets/skills/php.webp";
 import laravel from "../../assets/skills/laravel.webp";
 import bootstrap from "../../assets/skills/bootstrap.webp";
 import mysql from "../../assets/skills/mysql.webp";
 import angular from "../../assets/skills/angular.webp";
-import next from "../../assets/skills/next.svg";
 import { Fade } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 

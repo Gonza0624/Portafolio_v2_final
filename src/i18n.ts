@@ -39,26 +39,30 @@ i18n.use(initReactI18next).init({
         title: "My",
         title2: "projects",
         repository: "Repository",
-        ecommerce: "Ecommerce",
+        ecommerce: "Ecom",
+        ecommerce2: "merce",
         ecommerceParagraph:
-          "Ecommerce made with Laravel, Bootstrap and MySQL, contains product catalog, detail, shopping cart, admin dashboard etc.",
-        pokedexParagraph:
-          "Application made with react native, consuming the pokemon api to show the characters and their details.",
-        rickTitle: "Rick and morty api",
+          "BuyTheFuture is an e-commerce project developed as my final project at SENA. This project allowed me to strengthen my web development skills. It is an online shopping platform where users can browse categories, view products, add to cart and more. It also has an administration panel that offers several CRUD functions to manage the platform.",
+        rickTitle: "Rick",
+        rickTitle2: "and morty",
         rickParagraph:
-          "project made with react, typescript, css for the consumption of the api of rick and morty where each of the characters are shown with their details and page layout.",
-        portfolioTitle: "Portfolio V1",
+          "This project uses the Rick and Morty API to display detailed character information, including pagination. This project allowed me to learn how to work with APIs in React and how to use Axios for data requests effectively.",
+        portfolioTitle: "Portfolio",
+        portfolioTitle2: "V1",
         portfolioParagraph:
-          "this was the first version of my portfolio made during my internship at globant using react, javascript and sass",
-        userCrudTitle: "User CRUD",
-        userCrudParagraph:
-          "User crud made with react, typescript, bootstrap, axios and an api built in express and mysql",
-        gifsTitle: "Gifs App Angular",
+          "This is the first version of my portfolio, which I developed during my internship at Globant. This project allowed me to learn a little more about react and its structure. It also gave me the essential basis to continue my learning process throughout my internship.",
+        portfolioFinalTitle: "Final",
+        portfolioFinalTitle2: "portfolio",
+        portfolioFinalParagraph:
+          "This is the final version of my portfolio, it is a very significant project for me, because here I had the opportunity to demonstrate and perfect all my knowledge in software development. This project reflects the progress I have achieved in development compared to the first version I created.",
+        gifsTitle: "Gifs",
+        gifsTitle2: "search",
         gifsParagraph:
-          "Gifs search application made with angular and local storage for data persistence",
-        countryTitle: "Country App Angular",
+          "This was one of my first projects with Angular, which helped me to acquire the basics and better understand its structure. For this project, I used the gifs search API and local storage to save each user's gifs in the browser.",
+        countryTitle: "Country",
+        countryTitle2: "search",
         countryParagraph:
-          "Angular application for country search by country, region or capital using the REST Countries API",
+          "This project uses the REST COUNTRIES API to search for countries. This project allowed me to go deeper into Angular, understanding its modules, directives, decorators for communication between components, routes, lazy loading, pipes, among other aspects.",
       },
       contact: {
         title: "Contact",
@@ -120,26 +124,30 @@ i18n.use(initReactI18next).init({
         title: "Mis",
         title2: "proyectos",
         repository: "Repositorio",
-        ecommerce: "Tienda virtual",
+        ecommerce: "Tienda",
+        ecommerce2: "virtual",
         ecommerceParagraph:
-          "Tienda virtual realizada con Laravel, Bootstrap y MySQL, contiene catálogo de productos, detalles, carrito de compras, panel de administración, etc.",
-        pokedexParagraph:
-          "Aplicación hecha con React Native, consumiendo la api de Pokemon para mostrar los personajes y sus detalles.",
-        rickTitle: "Rick y morty api",
+          "BuyTheFuture es un proyecto de comercio electrónico desarrollado como mi proyecto final en el SENA. Este proyecto me permitió fortalecer mis habilidades en el desarrollo web. Se trata de una plataforma de compras en línea en la que los usuarios pueden explorar categorías, ver productos, agregar al carrito y más. Además, cuenta con un panel de administración que ofrece diversas funciones CRUD para gestionar la plataforma.",
+        rickTitle: "Rick",
+        rickTitle2: "y Morty",
         rickParagraph:
-          "Proyecto hecho con React, Typescript, css para el consumo de la api de rick y morty donde se muestra cada uno de los personajes con sus detalles y paginacion.",
-        portfolioTitle: "Portafolio V1",
+          "Este proyecto emplea la API de Rick y Morty para mostrar información detallada de los personajes, incluyendo paginación. Este proyecto me permitió aprender a trabajar con APIs en React y a utilizar Axios para las solicitudes de datos de manera efectiva.",
+        portfolioTitle: "Portafolio",
+        portfolioTitle2: "V1",
         portfolioParagraph:
-          "esta fue la primera versión de mi portafolio realizado durante mis practicas en Globant usando react, javascript y sass",
-        userCrudTitle: "CRUD de usuarios",
-        userCrudParagraph:
-          "Crud de usuarios hecho con React, Typescript, bootstrap, axios y una API hecha en express y mysql",
-        gifsTitle: "Aplicación de Gifs Angular",
+          "Esta es la primera versión de mi portafolio, el cual desarrollé durante mis prácticas en Globant. Este proyecto me permitió conocer un poco más acerca de react y su estructura. Además, me brindó las bases esenciales para continuar mi proceso de aprendizaje a lo largo de mis prácticas.",
+        portfolioFinalTitle: "Portafolio",
+        portfolioFinalTitle2: "final",
+        portfolioFinalParagraph:
+          "Esta es la versión final de mi portafolio, es un proyecto muy significativo para mi, ya que aquí tuve la oportunidad de demostrar y perfeccionar todos mis conocimientos en el desarrollo de software. Este proyecto refleja el progreso que he alcanzado en el desarrollo en comparación con la primera versión que creé.",
+        gifsTitle: "Buscador",
+        gifsTitle2: "de Gifs",
         gifsParagraph:
-          "Aplicación de búsqueda de gifs hecha con angular y local storage para la persistencia de datos.",
-        countryTitle: "Aplicacion de paises Angular",
+          "Este fue uno de mis primeros proyectos con Angular, el cual me ayudó a adquirir las bases y comprender mejor su estructura. Para este proyecto, utilicé la API de búsqueda de gifs y el almacenamiento local para guardar los gifs de cada usuario en el navegador.",
+        countryTitle: "Buscador",
+        countryTitle2: "de paises",
         countryParagraph:
-          "Aplicación angular para la búsqueda de países por país, región o capital usando REST Countries API",
+          "Este proyecto utiliza la API REST COUNTRIES para buscar países. Este proyecto me permitió profundizar más en Angular, comprendiendo sus módulos, directivas, decoradores para la comunicación entre componentes, rutas, lazy loading, pipes, entre otros aspectos.",
       },
       contact: {
         title: "Contácta",

@@ -63,6 +63,12 @@ i18n.use(initReactI18next).init({
         countryTitle2: "search",
         countryParagraph:
           "This project uses the REST COUNTRIES API to search for countries. This project allowed me to go deeper into Angular, understanding its modules, directives, decorators for communication between components, routes, lazy loading, pipes, among other aspects.",
+        crudNextTitle: "To",
+        crudNextTitle2: "Do List",
+        crudNextParagraph:
+          "This project uses CRUD operations to manage all tasks. In addition, Docker has been implemented to run the MySQL database and the project in a network consisting of two containers. Both frontend and backend are integrated in the same project, thanks to the functionalities provided by Next.js.",
+        viewMore: "View more",
+        viewLess: "View less",
       },
       contact: {
         title: "Contact",
@@ -148,6 +154,12 @@ i18n.use(initReactI18next).init({
         countryTitle2: "de paises",
         countryParagraph:
           "Este proyecto utiliza la API REST COUNTRIES para buscar países. Este proyecto me permitió profundizar más en Angular, comprendiendo sus módulos, directivas, decoradores para la comunicación entre componentes, rutas, lazy loading, pipes, entre otros aspectos.",
+        crudNextTitle: "Lista",
+        crudNextTitle2: "de tareas",
+        crudNextParagraph:
+          "Este proyecto emplea las operaciones CRUD para gestionar todas las tareas. Además, se ha implementado Docker para ejecutar la base de datos de MySQL y el proyecto en una red que consta de dos contenedores. Tanto el frontend como el backend se encuentran integrados en el mismo proyecto, gracias a las funcionalidades proporcionadas por Next.js.",
+        viewMore: "Ver más",
+        viewLess: "Ver menos",
       },
       contact: {
         title: "Contácta",

@@ -31,7 +31,13 @@
     font-weight: 700;
     margin-bottom: 10px;
     color: var(--title-color);
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 900px) {
+      & {
+        width: 100%;
+        font-size: 2rem;
+      }
+    }
+    @media screen and (max-width: 500px) {
       & {
         font-size: 1.9rem;
         margin: 10px 0px;

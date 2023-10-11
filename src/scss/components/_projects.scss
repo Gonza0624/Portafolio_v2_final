@@ -12,7 +12,7 @@
     width: 100%;
     height: 100%;
     padding: 20px;
-    margin: 50px 0px;
+    margin: 80px 0px;
 
     @media screen and (max-width: 1080px) {
       & {
@@ -107,6 +107,10 @@
       margin-right: 15px;
     }
 
+    .docker {
+      width: 65px;
+    }
+
     @media screen and (max-width: 350px) {
       & {
         display: grid;
@@ -121,7 +125,7 @@
 
     img {
       max-width: 100%;
-      width: 800px;
+      width: 700px;
       height: auto;
       border: 2px solid var(--main-color);
       border-radius: 20px;
@@ -170,9 +174,65 @@
       border-color: var(--main-color--hover);
     }
   }
+
+  &__ver-mas {
+    @include mixin.flex(center);
+    margin: 50px 30px;
+    button {
+      @include mixin.flex(center);
+      flex-direction: column;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      span {
+        color: var(--text-color);
+        font-size: 1.2rem;
+        &:hover {
+          color: var(--main-color);
+          transition: all 0.2s linear;
+        }
+      }
+    }
+  }
 }
 
 .slick-slider .slick-prev,
 .slick-next {
   visibility: hidden;
+}
+
+.transition-content-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.transition-content-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.transition-content-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.transition-content-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: 0px auto;
+}
+
+.separator .line {
+  height: 3px;
+  flex: 1;
+  background-color: var(--main-color);
 }

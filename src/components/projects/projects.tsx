@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { AiFillGithub } from "react-icons/ai";
 import { Fade } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 // iconos
 import html from "../../assets/skills/html.webp";
@@ -18,6 +20,8 @@ import laravel from "../../assets/skills/laravel.webp";
 import bootstrap from "../../assets/skills/bootstrap.webp";
 import mysql from "../../assets/skills/mysql.webp";
 import angular from "../../assets/skills/angular.webp";
+import next from "../../assets/skills/next.webp";
+import docker from "../../assets/skills/docker.webp";
 
 // imagenes del ecommerce
 import ecom1 from "../../assets/projects-img/ecommerce/ecom_1.webp";
@@ -59,8 +63,22 @@ import country2 from "../../assets/projects-img/countryApp/countryApp_2.webp";
 import country3 from "../../assets/projects-img/countryApp/countryApp_3.webp";
 import country4 from "../../assets/projects-img/countryApp/countryApp_4.webp";
 
+// imagenes de el crud con next js
+import crud1 from "../../assets/projects-img/next-crud/crud_1.webp";
+import crud2 from "../../assets/projects-img/next-crud/crud_2.webp";
+import crud3 from "../../assets/projects-img/next-crud/crud_3.webp";
+import crud4 from "../../assets/projects-img/next-crud/crud_4.webp";
+import crud5 from "../../assets/projects-img/next-crud/crud_5.webp";
+import crud6 from "../../assets/projects-img/next-crud/crud_6.webp";
+
 const Projects_2 = () => {
   const { t } = useTranslation("projects");
+
+  const [mostrarContenido, setMostrarContenido] = useState(false);
+
+  const toggleContenido = () => {
+    setMostrarContenido(!mostrarContenido);
+  };
 
   const ecommerce_images = [
     ecom1,
@@ -95,6 +113,8 @@ const Projects_2 = () => {
 
   const countries_images = [country1, country2, country3, country4];
 
+  const next_crud_images = [crud1, crud2, crud3, crud4, crud5, crud6];
+
   const settings = {
     dots: true,
     infinite: true,
@@ -113,7 +133,6 @@ const Projects_2 = () => {
           <span className="projects-section__span">{t("title2")}</span>{" "}
         </p>
       </div>
-
       <Fade triggerOnce delay={400} damping={0.1}>
         <div className="projects-section__content">
           <div className="projects-section__description-project">
@@ -276,84 +295,152 @@ const Projects_2 = () => {
           </div>
         </div>
       </Fade>
-      <Fade triggerOnce delay={400} damping={0.1}>
-        <div className="projects-section__content">
-          <div className="projects-section__description-project">
-            <h1 className="projects-section__title">
-              {t("gifsTitle")}{" "}
-              <span className="projects-section__span">{t("gifsTitle2")}</span>
-            </h1>
-            <p className="projects-section__paragraph">{t("gifsParagraph")}</p>
-            <figure className="projects-section__container-badges">
-              <img className="" src={angular} />
-              <img className="" src={typeScript} />
-              <img className="" src={bootstrap} />
-              <img className="" src={git} />
-            </figure>
-            <div className="projects-section__container-btn">
-              <a
-                target="_blank"
-                type="button"
-                href={"https://github.com/Gonza0624/Gifs-App-Angular"}
-                className="projects-section__btn"
-              >
-                {t("repository")}{" "}
-                <AiFillGithub className="projects-section__icon-btn" />
-              </a>
-            </div>
-          </div>
-          <div className="projects-section__img-container">
-            <Slider {...settings}>
-              {gifs_images.map((image, index) => (
-                <div key={index}>
-                  <img src={image} alt={`img${index + 1}`} />
+      <CSSTransition
+        in={mostrarContenido}
+        timeout={300}
+        classNames="transition-content"
+        unmountOnExit
+      >
+        <>
+          <Fade triggerOnce delay={400} damping={0.1}>
+            <div className="projects-section__content">
+              <div className="projects-section__description-project">
+                <h1 className="projects-section__title">
+                  {t("gifsTitle")}{" "}
+                  <span className="projects-section__span">
+                    {t("gifsTitle2")}
+                  </span>
+                </h1>
+                <p className="projects-section__paragraph">
+                  {t("gifsParagraph")}
+                </p>
+                <figure className="projects-section__container-badges">
+                  <img className="" src={angular} />
+                  <img className="" src={typeScript} />
+                  <img className="" src={bootstrap} />
+                  <img className="" src={git} />
+                </figure>
+                <div className="projects-section__container-btn">
+                  <a
+                    target="_blank"
+                    type="button"
+                    href={"https://github.com/Gonza0624/Gifs-App-Angular"}
+                    className="projects-section__btn"
+                  >
+                    {t("repository")}{" "}
+                    <AiFillGithub className="projects-section__icon-btn" />
+                  </a>
                 </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-      </Fade>
-      <Fade triggerOnce delay={400} damping={0.1}>
-        <div className="projects-section__content">
-          <div className="projects-section__description-project">
-            <h1 className="projects-section__title">
-              {t("countryTitle")}{" "}
-              <span className="projects-section__span">
-                {t("countryTitle2")}
-              </span>
-            </h1>
-            <p className="projects-section__paragraph">
-              {t("countryParagraph")}
-            </p>
-            <figure className="projects-section__container-badges">
-              <img className="" src={angular} />
-              <img className="" src={typeScript} />
-              <img className="" src={bootstrap} />
-              <img className="" src={git} />
-            </figure>
-            <div className="projects-section__container-btn">
-              <a
-                target="_blank"
-                type="button"
-                href={"https://github.com/Gonza0624/country_app"}
-                className="projects-section__btn"
-              >
-                {t("repository")}{" "}
-                <AiFillGithub className="projects-section__icon-btn" />
-              </a>
+              </div>
+              <div className="projects-section__img-container">
+                <Slider {...settings}>
+                  {gifs_images.map((image, index) => (
+                    <div key={index}>
+                      <img src={image} alt={`img${index + 1}`} />
+                    </div>
+                  ))}
+                </Slider>
+              </div>
             </div>
-          </div>
-          <div className="projects-section__img-container">
-            <Slider {...settings}>
-              {countries_images.map((image, index) => (
-                <div key={index}>
-                  <img src={image} alt={`img${index + 1}`} />
+          </Fade>
+          <Fade triggerOnce delay={400} damping={0.1}>
+            <div className="projects-section__content">
+              <div className="projects-section__description-project">
+                <h1 className="projects-section__title">
+                  {t("countryTitle")}{" "}
+                  <span className="projects-section__span">
+                    {t("countryTitle2")}
+                  </span>
+                </h1>
+                <p className="projects-section__paragraph">
+                  {t("countryParagraph")}
+                </p>
+                <figure className="projects-section__container-badges">
+                  <img className="" src={angular} />
+                  <img className="" src={typeScript} />
+                  <img className="" src={bootstrap} />
+                  <img className="" src={git} />
+                </figure>
+                <div className="projects-section__container-btn">
+                  <a
+                    target="_blank"
+                    type="button"
+                    href={"https://github.com/Gonza0624/country_app"}
+                    className="projects-section__btn"
+                  >
+                    {t("repository")}{" "}
+                    <AiFillGithub className="projects-section__icon-btn" />
+                  </a>
                 </div>
-              ))}
-            </Slider>
-          </div>
+              </div>
+              <div className="projects-section__img-container">
+                <Slider {...settings}>
+                  {countries_images.map((image, index) => (
+                    <div key={index}>
+                      <img src={image} alt={`img${index + 1}`} />
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
+          </Fade>
+          <Fade triggerOnce delay={400} damping={0.1}>
+            <div className="projects-section__content">
+              <div className="projects-section__description-project">
+                <h1 className="projects-section__title">
+                  {t("crudNextTitle")}{" "}
+                  <span className="projects-section__span">
+                    {t("crudNextTitle2")}
+                  </span>
+                </h1>
+                <p className="projects-section__paragraph">
+                  {t("crudNextParagraph")}
+                </p>
+                <figure className="projects-section__container-badges">
+                  <img className="" src={next} />
+                  <img className="" src={js} />
+                  <img className="" src={sass} />
+                  <img className="" src={git} />
+                  <img className="docker" src={docker} />
+                </figure>
+                <div className="projects-section__container-btn">
+                  <a
+                    target="_blank"
+                    type="button"
+                    href={"https://github.com/Gonza0624/lista-de-tareas-nextjs"}
+                    className="projects-section__btn"
+                  >
+                    {t("repository")}{" "}
+                    <AiFillGithub className="projects-section__icon-btn" />
+                  </a>
+                </div>
+              </div>
+              <div className="projects-section__img-container">
+                <Slider {...settings}>
+                  {next_crud_images.map((image, index) => (
+                    <div key={index}>
+                      <img width={100} src={image} alt={`img${index + 1}`} />
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
+          </Fade>
+        </>
+      </CSSTransition>
+      <div className="separator">
+        <div className="line"></div>
+        <div className="projects-section__ver-mas">
+          <button onClick={toggleContenido}>
+            {mostrarContenido ? (
+              <span>{t("viewLess")}</span>
+            ) : (
+              <span>{t("viewMore")}</span>
+            )}
+          </button>
         </div>
-      </Fade>
+        <div className="line"></div>
+      </div>{" "}
     </div>
   );
 };

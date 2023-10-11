@@ -10,6 +10,8 @@ import laravel from "../../assets/skills/laravel.webp";
 import bootstrap from "../../assets/skills/bootstrap.webp";
 import mysql from "../../assets/skills/mysql.webp";
 import angular from "../../assets/skills/angular.webp";
+import next from "../../assets/skills/next.webp";
+import docker from "../../assets/skills/docker.webp";
 import { Fade } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 
@@ -43,7 +45,7 @@ const MainSkills = () => {
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>
               <div className="main-skills-section__my-skill">
                 <img className="main-skills-section__img" src={js} />
-                <h4>Javascript</h4>
+                <h4>JavaScript</h4>
               </div>
             </Fade>
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>
@@ -60,8 +62,20 @@ const MainSkills = () => {
             </Fade>
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>
               <div className="main-skills-section__my-skill">
+                <img className="main-skills-section__img" src={next} />
+                <h4>Next JS</h4>
+              </div>
+            </Fade>
+            <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+              <div className="main-skills-section__my-skill">
                 <img className="main-skills-section__img" src={angular} />
                 <h4>Angular</h4>
+              </div>
+            </Fade>
+            <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+              <div className="main-skills-section__my-skill">
+                <img className="main-skills-section__img" src={laravel} />
+                <h4>Laravel</h4>
               </div>
             </Fade>
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>
@@ -72,20 +86,14 @@ const MainSkills = () => {
             </Fade>
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>
               <div className="main-skills-section__my-skill">
-                <img className="main-skills-section__img" src={git} />
-                <h4>Git</h4>
-              </div>
-            </Fade>
-            <Fade triggerOnce direction="left" delay={50} damping={0.1}>
-              <div className="main-skills-section__my-skill">
                 <img className="main-skills-section__img" src={php} />
                 <h4>PHP</h4>
               </div>
             </Fade>
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>
               <div className="main-skills-section__my-skill">
-                <img className="main-skills-section__img" src={laravel} />
-                <h4>Laravel</h4>
+                <img className="main-skills-section__img" src={git} />
+                <h4>Git</h4>
               </div>
             </Fade>
             <Fade triggerOnce direction="left" delay={50} damping={0.1}>
@@ -98,6 +106,12 @@ const MainSkills = () => {
               <div className="main-skills-section__my-skill">
                 <img className="main-skills-section__img" src={mysql} />
                 <h4>MySQL</h4>
+              </div>
+            </Fade>
+            <Fade triggerOnce direction="left" delay={50} damping={0.1}>
+              <div className="main-skills-section__my-skill">
+                <img width={80} src={docker} />
+                <h4>Docker</h4>
               </div>
             </Fade>
           </div>

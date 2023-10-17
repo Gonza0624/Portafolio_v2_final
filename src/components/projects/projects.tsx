@@ -401,6 +401,7 @@ const Projects_2 = () => {
                   <img className="" src={js} />
                   <img className="" src={sass} />
                   <img className="" src={git} />
+                  <img className="" src={mysql} />
                   <img className="docker" src={docker} />
                 </figure>
                 <div className="projects-section__container-btn">

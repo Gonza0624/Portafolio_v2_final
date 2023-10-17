@@ -101,10 +101,12 @@
 
 .social-icons {
   display: none;
+  a {
+    @include mixin.flex(center);
+  }
 }
 
 .links-container {
-  background-color: transparent;
   height: 0;
   overflow: hidden;
   transition: all 0.3s linear;

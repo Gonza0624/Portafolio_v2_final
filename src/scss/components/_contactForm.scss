@@ -7,9 +7,9 @@
   height: 100vh;
   background-color: var(--white);
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 900px) {
     & {
-      height: 95vh;
+      height: 100%;
     }
   }
 
@@ -75,7 +75,7 @@
     padding: 20px;
     border-radius: 2px;
     border: none;
-    background-color: var(--light-grey);
+    background-color: var(--main-white);
     border-bottom: 3px solid transparent;
     width: 100%;
     max-height: 200px;

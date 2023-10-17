@@ -39,7 +39,7 @@ i18n.use(initReactI18next).init({
         title: "My",
         title2: "projects",
         repository: "Repository",
-        ecommerce: "Ecom",
+        ecommerce: "E-com",
         ecommerce2: "merce",
         ecommerceParagraph:
           "BuyTheFuture is an e-commerce project developed as my final project at SENA. This project allowed me to strengthen my web development skills. It is an online shopping platform where users can browse categories, view products, add to cart and more. It also has an administration panel that offers several CRUD functions to manage the platform.",
@@ -71,7 +71,7 @@ i18n.use(initReactI18next).init({
         viewLess: "View less",
       },
       contact: {
-        title: "Contact",
+        title: "Contact ",
         title2: "me",
         message: "The message will be sent to my email address",
         name: "Name",
@@ -130,7 +130,7 @@ i18n.use(initReactI18next).init({
         title: "Mis",
         title2: "proyectos",
         repository: "Repositorio",
-        ecommerce: "Tienda",
+        ecommerce: "Tienda ",
         ecommerce2: "virtual",
         ecommerceParagraph:
           "BuyTheFuture es un proyecto de comercio electrónico desarrollado como mi proyecto final en el SENA. Este proyecto me permitió fortalecer mis habilidades en el desarrollo web. Se trata de una plataforma de compras en línea en la que los usuarios pueden explorar categorías, ver productos, agregar al carrito y más. Además, cuenta con un panel de administración que ofrece diversas funciones CRUD para gestionar la plataforma.",

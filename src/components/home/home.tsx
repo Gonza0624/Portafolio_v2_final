@@ -38,7 +38,7 @@ const Home: React.FC = () => {
                 <a
                   target="_blank"
                   type="button"
-                  href="https://drive.google.com/file/d/1-ptEMtEmUhXjeMgDoPSpOpXzYKM9n-08/view"
+                  href="https://drive.google.com/file/d/1gCdLX72MnpSgiqgbJ64BYOKL5GLcwKwM/view"
                   className="home-section__btn"
                 >
                   {t("textBtn")}{" "}

@@ -55,6 +55,12 @@
     opacity: 0.8;
     transition: 0.2s ease;
     color: var(--main-color);
+    @media screen and (min-width: 1625px) {
+      & {
+        width: 35px;
+        right: 0;
+      }
+    }
   }
 
   &__value {
@@ -78,6 +84,11 @@
     img {
       @include mixin.flex(center);
       width: 30px;
+      @media screen and (min-width: 1625px) {
+        & {
+          width: 40px;
+        }
+      }
     }
   }
 

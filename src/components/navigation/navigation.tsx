@@ -3,7 +3,7 @@ import "@theme-toggles/react/css/Within.css";
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { FaBars } from "react-icons/fa";
 import logo from "/logo/logo.png";
-import { links, social } from "./data";
+import { social } from "./data";
 import { Link } from "react-scroll";
 import { Within } from "@theme-toggles/react";
 import { ThemeContext } from "../themeContext/themeContext";
@@ -88,12 +88,12 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
             <div className="container-language">
               <LanguageSwitcher />
             </div>
-          <button
-            className="nav-toggle"
-            onClick={() => setShowLinks(!showLinks)}
-          >
-            <FaBars />
-          </button>
+            <button
+              className="nav-toggle"
+              onClick={() => setShowLinks(!showLinks)}
+            >
+              <FaBars />
+            </button>
           </div>
         </div>
 
@@ -101,24 +101,12 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
           <ul className="links" ref={linksRef}>
             <li>
               <Link
-                to={"home"}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={200}
-                className="links"
-              >
-                {t("home")}
-              </Link>
-            </li>
-            <li>
-              <Link
                 to={"about"}
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={200}
                 className="links"
+                activeClass="active"
               >
                 {t("about")}
               </Link>
@@ -128,9 +116,9 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
                 to={"skills"}
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={200}
                 className="links"
+                activeClass="active"
               >
                 {t("skills")}
               </Link>
@@ -140,9 +128,9 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
                 to={"projects"}
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={200}
                 className="links"
+                activeClass="active"
               >
                 {t("projects")}
               </Link>
@@ -152,9 +140,9 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
                 to={"contact"}
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={200}
                 className="links"
+                activeClass="active"
               >
                 {t("contact")}
               </Link>
@@ -164,9 +152,9 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
                 to={"certificates"}
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={200}
                 className="links"
+                activeClass="active"
               >
                 {t("certificates")}
               </Link>

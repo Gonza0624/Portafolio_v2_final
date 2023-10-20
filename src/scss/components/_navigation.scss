@@ -7,6 +7,11 @@
   z-index: 100;
 }
 
+.active {
+  color: var(--main-color) !important;
+  transition: all 0.3s linear;
+}
+
 .nav-div {
   @include mixin.flex(space-between);
   margin-right: 10px;
@@ -31,17 +36,32 @@
   font-size: 30px;
   @include mixin.flex(center);
   color: var(--main-color);
+  @media screen and (min-width: 1625px) {
+    & {
+      font-size: 35px;
+    }
+  }
 }
 
 .brand {
   color: var(--main-color);
   font-size: 1.7rem;
+  @media screen and (min-width: 1625px) {
+    & {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 .nav-header {
   @include mixin.flex(space-between);
   padding: 1rem;
   width: 320px;
+  @media screen and (min-width: 1625px) {
+    & {
+      width: 420px;
+    }
+  }
 }
 
 @media screen and (max-width: 1030px) {
@@ -60,6 +80,12 @@
   margin: 0;
   width: 35px;
   height: 40px;
+  @media screen and (min-width: 1625px) {
+    & {
+      width: 50px;
+      height: 60px;
+    }
+  }
 }
 
 .nav-toggle {
@@ -78,7 +104,7 @@
 
 .links a {
   font-size: 1rem;
-  margin-right: 30px !important;
+  margin-right: 35px !important;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   display: block;
@@ -86,6 +112,11 @@
   transition: all 0.2s linear;
   cursor: pointer;
   color: var(--text-color);
+  @media screen and (min-width: 1625px) {
+    & {
+      font-size: 1.3rem;
+    }
+  }
 }
 
 .links a:hover {
@@ -103,6 +134,21 @@
   display: none;
   a {
     @include mixin.flex(center);
+    font-size: 25px;
+    @media screen and (min-width: 1625px) {
+      & {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+.icon-email {
+  font-size: 30px;
+  @media screen and (min-width: 1625px) {
+    & {
+      font-size: 45px;
+    }
   }
 }
 
@@ -123,7 +169,7 @@
 
 @media screen and (min-width: 1030px) {
   .nav-center {
-    max-width: 1170px;
+    max-width: 1190px;
     margin: 0 auto;
     @include mixin.flex(space-between);
     padding: 1rem;
@@ -158,5 +204,14 @@
   }
   .social-icons a:hover {
     color: var(--main-color);
+  }
+}
+
+@media screen and (min-width: 1625px) {
+  .nav-center {
+    max-width: 1470px;
+    margin: 0 auto;
+    @include mixin.flex(space-between);
+    padding: 1rem;
   }
 }

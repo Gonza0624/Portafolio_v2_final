@@ -1,4 +1,5 @@
-import { FaGithub, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 
 export const links: {
   id: number;
@@ -45,16 +46,21 @@ export const social: {
   {
     id: 1,
     url: "https://www.linkedin.com/in/gonzalo-salazar-carvajal-965284218/",
-    icon: <FaLinkedin fontSize={25} />,
+    icon: <FaLinkedin />,
   },
   {
     id: 2,
     url: "https://github.com/Gonza0624",
-    icon: <FaGithub fontSize={25} />,
+    icon: <FaGithub />,
   },
   {
     id: 3,
-    url: "https://api.whatsapp.com/send/?phone=573157304681",
-    icon: <FaWhatsapp fontSize={25} />,
+    url: "https://mailto:gonzalosalazar1180@gmail.com",
+    icon: (
+      <HiOutlineMail
+        title="gonzalosalazar1180@gmail.com"
+        className="icon-email"
+      />
+    ),
   },
 ];

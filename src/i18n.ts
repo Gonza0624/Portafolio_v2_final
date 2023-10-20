@@ -13,11 +13,11 @@ i18n.use(initReactI18next).init({
         certificates: "Certificates",
       },
       home: {
-        name: "my name is Gonzalo",
-        title: "Hello",
+        name: "Hi, my name is Gonzalo",
+        title: "Front-end Developer",
         paragraph:
-          "Welcome to my portfolio! I am a passionate software developer with a love for technology and programming, and here you can see some of my latest work.",
-        textBtn: "My resume",
+          "Welcome to my portfolio! I am a software developer specialized in front-end. My goal is to face challenges and embark on a constant journey of growth and learning.",
+        textBtn: "Resume",
       },
       about: {
         title: "About",
@@ -97,18 +97,18 @@ i18n.use(initReactI18next).init({
     es: {
       nav: {
         home: "Inicio",
-        about: "SobreMi",
+        about: "Acerca",
         skills: "Habilidades",
         projects: "Proyectos",
         contact: "Contacto",
         certificates: "Certificados",
       },
       home: {
-        name: "mi nombre es Gonzalo",
-        title: "Hola",
+        name: "Hola, soy Gonzalo",
+        title: "Desarrollador Front-end",
         paragraph:
-          "¡Bienvenido a mi portafolio! Soy un desarrollador de software apasionado por la tecnología y la programación, aquí puedes ver algunos de mis últimos trabajos.",
-        textBtn: "Hoja de vida",
+          "¡Bienvenido a mi portafolio! Soy un desarrollador de software especializado en front-end. mi objetivo es afrontar desafíos y embarcarme en un viaje constante de crecimiento y aprendizaje.",
+        textBtn: "Currículum",
       },
       about: {
         title: "Sobre",

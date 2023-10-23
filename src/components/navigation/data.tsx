@@ -55,7 +55,7 @@ export const social: {
   },
   {
     id: 3,
-    url: "https://mailto:gonzalosalazar1180@gmail.com",
+    url: "https://mail.google.com/mail/?view=cm&to=gonzalosalazar1180@gmail.com",
     icon: (
       <HiOutlineMail
         title="gonzalosalazar1180@gmail.com"

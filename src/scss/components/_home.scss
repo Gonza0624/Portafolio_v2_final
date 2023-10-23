@@ -18,29 +18,33 @@
       & {
         height: 100%;
         width: 100%;
+        margin-bottom: 5%;
       }
     }
   }
 
   &__content {
-    @include mixin.flex(flex-start);
+    @include mixin.flex(center);
     width: 100%;
     margin-left: 5%;
     @media screen and (max-width: 900px) {
       & {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 20px;
-        margin-right: 0px;
+        margin-right: 0;
         margin-left: 0;
+        margin-bottom: 100px;
       }
     }
   }
 
   &__container-text {
     width: 60%;
+    margin-top: 50px;
     @media screen and (max-width: 900px) {
       & {
         width: 80%;
+        margin-top: 100px;
       }
     }
     @media screen and (max-width: 600px) {
@@ -63,7 +67,7 @@
     @media screen and (max-width: 900px) {
       & {
         margin: 0;
-        height: 400px;
+        height: 250px;
       }
     }
     img {

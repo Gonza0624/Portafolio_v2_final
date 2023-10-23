@@ -14,7 +14,7 @@ i18n.use(initReactI18next).init({
       },
       home: {
         name: "Hi, my name is Gonzalo",
-        title: "Front-end Developer",
+        title: "Frontend Developer",
         paragraph:
           "Welcome to my portfolio! I am a software developer specialized in front-end. My goal is to face challenges and embark on a constant journey of growth and learning.",
         textBtn: "Resume",
@@ -23,7 +23,7 @@ i18n.use(initReactI18next).init({
         title: "About",
         title2: "me",
         paragraph:
-          "I am Gonzalo Salazar, I am 21 years old, I did a technologist in the training program of analysis and software development at Sena, I did my internship with Globant fulfilling the role of Web UI developer, I am a responsible, organized, creative person, I am also a fast learner and I adapt to any situation, eager to learn and grow in the future personally and professionally.",
+          "My name is Gonzalo, I'm 21 years old, I studied analysis and software development at Sena. I also did an internship as a Web UI developer at Globant, demonstrating responsibility, organization and creativity. My adaptability and constant desire to learn drive me to look for a collaborative work environment where I can improve my skills and grow both personally and professionally, focusing on front-end development, and eager to learn more about design and backend.",
       },
       objective: {
         title: "My",
@@ -105,16 +105,16 @@ i18n.use(initReactI18next).init({
       },
       home: {
         name: "Hola, soy Gonzalo",
-        title: "Desarrollador Front-end",
+        title: "Desarrollador Frontend",
         paragraph:
-          "¡Bienvenido a mi portafolio! Soy un desarrollador de software especializado en front-end. mi objetivo es afrontar desafíos y embarcarme en un viaje constante de crecimiento y aprendizaje.",
+          "¡Bienvenido a mi portafolio! Soy un desarrollador de software especializado en front-end. Mi objetivo es afrontar desafíos y embarcarme en un viaje constante de crecimiento y aprendizaje.",
         textBtn: "Currículum",
       },
       about: {
         title: "Sobre",
         title2: "mi",
         paragraph:
-          "Soy Gonzalo Salazar. Tengo 21 años. Hice la carrera de análisis y desarrollo de software en el SENA. Realicé mis prácticas en Globant, cumpliendo el rol de desarrollador Web UI. Soy una persona responsable, organizada y creativa. También aprendo rápido y me adapto a cualquier situación. Tengo muchas ganas de aprender y crecer en el futuro, tanto personal como profesionalmente.",
+          "Mi nombre es Gonzalo, tengo 21 años y una formación en análisis y desarrollo de software en el SENA. También realicé prácticas como desarrollador Web UI en Globant, demostrando responsabilidad, organización y creatividad. Mi capacidad de adaptación y deseo constante de aprendizaje me impulsan a buscar un entorno de trabajo colaborativo donde pueda mejorar mis habilidades y crecer tanto personal como profesionalmente, centrándome en el desarrollo front-end, y con ganas de aprender más acerca de diseño y backend.",
       },
       objective: {
         title: "Mi",

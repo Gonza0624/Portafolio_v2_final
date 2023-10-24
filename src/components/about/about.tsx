@@ -1,5 +1,6 @@
 import { Fade } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
+import MainSkills from "../skills/mainSkills";
 
 const About = () => {
   const { t } = useTranslation("about");
@@ -18,6 +19,7 @@ const About = () => {
           </Fade>
         </div>
       </div>
+      <MainSkills />
     </section>
   );
 };

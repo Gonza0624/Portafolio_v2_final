@@ -5,7 +5,8 @@
   @include mixin.flex(center);
   height: 100vh;
   background-color: var(--white);
-  padding: 0px;
+  width: 100%;
+  flex-direction: column;
 
   @media screen and (max-width: 1000px) {
     & {
@@ -42,7 +43,6 @@
   }
 
   &__paragraph {
-    margin: 20px 0px;
     font-size: 1.2rem;
     color: var(--text-color) !important;
     line-height: 1.7;
@@ -64,15 +64,14 @@
 
   &__card {
     @include mixin.flex(center);
-    width: 70%;
+    width: 80%;
     height: 400px;
     max-width: 100%;
-    padding: 50px 20px 50px 20px;
+    padding: 20px;
     background-color: var(--white);
     border-radius: 10px;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 950px) {
       & {
-        flex-direction: column;
         height: 100%;
         width: 100%;
       }

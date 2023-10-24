@@ -135,10 +135,23 @@
   a {
     @include mixin.flex(center);
     font-size: 25px;
-    @media screen and (min-width: 1625px) {
-      & {
-        font-size: 35px;
-      }
+  }
+}
+
+.icon-linkedin {
+  font-size: 25px;
+  @media screen and (min-width: 1625px) {
+    & {
+      font-size: 35px;
+    }
+  }
+}
+
+.icon-github {
+  font-size: 25px;
+  @media screen and (min-width: 1625px) {
+    & {
+      font-size: 35px;
     }
   }
 }
@@ -148,6 +161,11 @@
   @media screen and (min-width: 1625px) {
     & {
       font-size: 45px;
+    }
+  }
+  @media screen and (max-width: 1030px) {
+    & {
+      font-size: 30px;
     }
   }
 }

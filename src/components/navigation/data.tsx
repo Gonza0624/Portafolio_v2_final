@@ -46,12 +46,12 @@ export const social: {
   {
     id: 1,
     url: "https://www.linkedin.com/in/gonzalo-salazar-carvajal-965284218/",
-    icon: <FaLinkedin />,
+    icon: <FaLinkedin className="icon-linkedin" />,
   },
   {
     id: 2,
     url: "https://github.com/Gonza0624",
-    icon: <FaGithub />,
+    icon: <FaGithub className="icon-github" />,
   },
   {
     id: 3,

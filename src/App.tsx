@@ -6,7 +6,6 @@ import Footer from "./components/footer/footer";
 import Home from "./components/home/home";
 import Navigation from "./components/navigation/navigation";
 import Projects from "./components/projects/projects";
-import MainSkills from "./components/skills/mainSkills";
 import { ThemeProvider } from "./components/themeContext/themeContext";
 import ReactGA from "react-ga";
 
@@ -20,7 +19,6 @@ const App = () => {
       <Navigation />
       <Home />
       <About />
-      <MainSkills />
       <Projects />
       <ContactForm />
       <Certificates />

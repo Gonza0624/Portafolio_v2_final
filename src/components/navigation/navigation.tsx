@@ -101,6 +101,18 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
           <ul className="links" ref={linksRef}>
             <li>
               <Link
+                to={"home"}
+                spy={true}
+                smooth={true}
+                duration={200}
+                className="links"
+                activeClass="active"
+              >
+                {t("home")}
+              </Link>
+            </li>
+            <li>
+              <Link
                 to={"about"}
                 spy={true}
                 smooth={true}
@@ -109,18 +121,6 @@ const Navbar: React.FC<INavbar> = (): React.ReactElement => {
                 activeClass="active"
               >
                 {t("about")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"skills"}
-                spy={true}
-                smooth={true}
-                duration={200}
-                className="links"
-                activeClass="active"
-              >
-                {t("skills")}
               </Link>
             </li>
             <li>

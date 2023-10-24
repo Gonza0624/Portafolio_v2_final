@@ -2,109 +2,68 @@
 @use "../abstracts/variables";
 
 .main-skills-section {
-  @include mixin.flex(center);
-  height: 100%;
-  background-color: var(--white);
-  padding: 20px;
-  flex-direction: column;
-  @media screen and (max-width: 740px) {
+  border-radius: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 30px;
+  width: 80%;
+  @media screen and (max-width: 950px) {
     & {
       height: 100%;
-      padding-top: 0;
-    }
-    @media screen and (max-width: 450px) {
-      & {
-        margin-bottom: 0px;
-        margin-top: 0px;
-      }
+      width: 100%;
+      padding: 20px;
     }
   }
-
-  &__content {
-    @include mixin.flex(center);
-    float: right;
-    height: 100%;
-    border-radius: 10px;
-    width: 90%;
-    padding: 20px;
-    right: 0;
-    margin-bottom: 50px;
-    margin-top: 50px;
-
-    @media screen and (max-width: 900px) {
-      & {
-        width: 100%;
-      }
+  @media screen and (max-width: 800px) {
+    & {
+      gap: 30px;
     }
   }
-
-  &__title {
-    font-size: 3.3rem;
-    font-weight: 700;
-    margin-bottom: 50px;
-    color: var(--title-color);
-    @media screen and (max-width: 740px) {
-      & {
-        font-size: 1.9rem;
-        margin: 50px 0px;
-        margin-top: 100px;
-      }
+  @media screen and (max-width: 650px) {
+    & {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
-
-  &__title-color {
-    color: var(--main-color);
+  @media screen and (max-width: 530px) {
+    & {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 250px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 150px) {
+    & {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__img {
-    width: 60px;
-    border-radius: 15px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
-
-  &__flex {
-    @include mixin.flex(center);
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    gap: 50px;
-    @media screen and (max-width: 1330px) {
+    width: 45px;
+    @media screen and (max-width: 530px) {
       & {
-        display: grid;
-        grid-template-columns: 200px 200px 200px 200px;
-        gap: 60px;
+        width: 50px;
       }
     }
-    @media screen and (max-width: 1050px) {
+    @media screen and (min-width: 1625px) {
       & {
-        display: grid;
-        grid-template-columns: 100px 100px 100px 100px;
-        gap: 60px;
-      }
-    }
-    @media screen and (max-width: 650px) {
-      & {
-        display: grid;
-        grid-template-columns: 100px 100px 100px;
-        gap: 60px;
-      }
-    }
-    @media screen and (max-width: 450px) {
-      & {
-        display: grid;
-        grid-template-columns: 100px 100px;
-        gap: 60px;
+        width: 70px;
       }
     }
   }
 
   &__my-skill {
-    text-align: center;
+    width: 100%;
     h4 {
       color: var(--text-color);
       line-height: 1.7;
       padding: 10px 0px;
+      width: 100%;
     }
   }
 }

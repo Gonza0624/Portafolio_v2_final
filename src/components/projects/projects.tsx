@@ -9,12 +9,12 @@ import { CSSTransition } from "react-transition-group";
 
 // iconos
 import html from "../../assets/skills/html.webp";
-import js from "../../assets/skills/js.webp";
+import js from "../../assets/skills/javascript.webp";
 import css from "../../assets/skills/css.webp";
 import react from "../../assets/skills/react.webp";
 import git from "../../assets/skills/git.webp";
 import sass from "../../assets/skills/sass.webp";
-import typeScript from "../../assets/skills/typeScript.webp";
+import typeScript from "../../assets/skills/ts.webp";
 import php from "../../assets/skills/php.webp";
 import laravel from "../../assets/skills/laravel.webp";
 import bootstrap from "../../assets/skills/bootstrap.webp";
@@ -118,8 +118,8 @@ const Projects_2 = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
-    autoplay: true,
+    speed: 600,
+    autoplay: false,
     autoplaySpeed: 1800,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -220,55 +220,13 @@ const Projects_2 = () => {
         <div className="projects-section__content">
           <div className="projects-section__description-project">
             <h1 className="projects-section__title">
-              {t("portfolioFinalTitle")}{" "}
-              <span className="projects-section__span">
-                {t("portfolioFinalTitle2")}
-              </span>
-            </h1>
-            <p className="projects-section__paragraph">
-              {t("portfolioFinalParagraph")}
-            </p>
-            <figure className="projects-section__container-badges">
-              <img className="" src={react} />
-              <img className="" src={typeScript} />
-              <img className="" src={css} />
-              <img className="" src={sass} />
-              <img className="" src={git} />
-            </figure>
-            <div className="projects-section__container-btn">
-              <a
-                target="_blank"
-                type="button"
-                href={"https://github.com/Gonza0624/Portafolio_v2_final"}
-                className="projects-section__btn"
-              >
-                {t("repository")}{" "}
-                <AiFillGithub className="projects-section__icon-btn" />
-              </a>
-            </div>
-          </div>
-          <div className="projects-section__img-container">
-            <Slider {...settings}>
-              {portfolio_final_images.map((image, index) => (
-                <div key={index}>
-                  <img src={image} alt={`img${index + 1}`} />
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-      </Fade>
-      <Fade triggerOnce delay={400} damping={0.1}>
-        <div className="projects-section__content">
-          <div className="projects-section__description-project">
-            <h1 className="projects-section__title">
               {t("rickTitle")}{" "}
               <span className="projects-section__span">{t("rickTitle2")}</span>
             </h1>
             <p className="projects-section__paragraph">{t("rickParagraph")}</p>
             <figure className="projects-section__container-badges">
               <img className="" src={react} />
-              <img className="" src={typeScript} />
+              <img className="projects-section__typescript-icon" src={typeScript} />
               <img className="" src={css} />
               <img className="" src={git} />
             </figure>
@@ -316,7 +274,7 @@ const Projects_2 = () => {
                 </p>
                 <figure className="projects-section__container-badges">
                   <img className="" src={angular} />
-                  <img className="" src={typeScript} />
+                  <img className="projects-section__typescript-icon" src={typeScript} />
                   <img className="" src={bootstrap} />
                   <img className="" src={git} />
                 </figure>
@@ -357,7 +315,7 @@ const Projects_2 = () => {
                 </p>
                 <figure className="projects-section__container-badges">
                   <img className="" src={angular} />
-                  <img className="" src={typeScript} />
+                  <img className="projects-section__typescript-icon" src={typeScript} />
                   <img className="" src={bootstrap} />
                   <img className="" src={git} />
                 </figure>

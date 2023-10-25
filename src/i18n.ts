@@ -73,7 +73,7 @@ i18n.use(initReactI18next).init({
       contact: {
         title: "Contact ",
         title2: "me",
-        message: "The message will be sent to my email address",
+        message: "gonzalosalazar1180@gmail.com",
         name: "Name",
         email: "Email",
         messageInput: "Message",
@@ -164,7 +164,7 @@ i18n.use(initReactI18next).init({
       contact: {
         title: "Contácta",
         title2: "me",
-        message: "El mensaje será enviado a mi correo electrónico",
+        message: "gonzalosalazar1180@gmail.com",
         name: "Nombre",
         email: "Correo",
         messageInput: "Mensaje",

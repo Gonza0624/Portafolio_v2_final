@@ -5,14 +5,27 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  margin: 50px 0px;
+  background-color: var(--white);
+  padding: 50px;
+  @media screen and (max-width: 450px) {
+    & {
+      padding: 20px;
+    }
+  }
 
   &__content {
     @include mixin.flex(space-around);
+    background-color: var(--main-white);
     width: 100%;
+    border-radius: 10px;
     height: 100%;
     padding: 20px;
     margin: 100px 0px;
+    @media screen and (min-width: 1625px) {
+      & {
+        margin: 200px 0px;
+      }
+    }
 
     @media screen and (max-width: 1080px) {
       & {
@@ -21,7 +34,7 @@
     }
     @media screen and (max-width: 500px) {
       & {
-        margin: 20px 0px;
+        margin: 50px 0px;
       }
     }
   }
@@ -43,6 +56,11 @@
         font-size: 1.9rem;
       }
     }
+    @media screen and (min-width: 1625px) {
+      & {
+        font-size: 4.3rem;
+      }
+    }
   }
 
   &__title {
@@ -58,6 +76,11 @@
     @media screen and (max-width: 500px) {
       & {
         font-size: 1.5rem;
+      }
+    }
+    @media screen and (min-width: 1625px) {
+      & {
+        font-size: 3.5rem;
       }
     }
   }
@@ -76,6 +99,11 @@
         font-size: 1.1rem;
       }
     }
+    @media screen and (min-width: 1625px) {
+      & {
+        font-size: 1.6rem;
+      }
+    }
   }
 
   &__description-project {
@@ -84,11 +112,6 @@
     font-size: 20px;
     line-height: 1.7;
     @media screen and (max-width: 1080px) {
-      & {
-        width: 80%;
-      }
-    }
-    @media screen and (max-width: 570px) {
       & {
         width: 100%;
       }
@@ -105,13 +128,18 @@
     img {
       width: 40px;
       margin-right: 15px;
+      @media screen and (min-width: 1625px) {
+        & {
+          width: 50px;
+        }
+      }
     }
 
     .docker {
       width: 65px;
     }
 
-    @media screen and (max-width: 350px) {
+    @media screen and (max-width: 380px) {
       & {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -120,20 +148,35 @@
     }
   }
 
+  &__typescript-icon {
+    width: 50px !important;
+    @media screen and (min-width: 1625px) {
+      & {
+        width: 60px !important;
+      }
+    }
+  }
+
   &__img-container {
     width: 60%;
-
+    margin-bottom: 30px;
     img {
       max-width: 100%;
       width: 700px;
       height: auto;
-      border: 2px solid var(--main-color);
-      border-radius: 20px;
+      border: 1px solid var(--main-color);
+      border-radius: 10px;
       background-size: cover;
 
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 1080px) {
         & {
-          border-radius: 10;
+          width: 100%;
+        }
+      }
+
+      @media screen and (min-width: 1625px) {
+        & {
+          width: 80%;
         }
       }
     }
@@ -151,7 +194,17 @@
 
   &__container-btn {
     @include mixin.flex(center);
-    width: 200px;
+    width: 300px;
+    @media screen and (min-width: 1625px) {
+      & {
+        width: 350px;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   &__btn {
@@ -159,19 +212,34 @@
     width: 100%;
     margin: 10px 0px;
     outline: none;
-    padding: 4px 20px;
-    background-color: var(--main-color);
-    border-radius: 0.25rem;
+    padding: 8px 25px;
+    background-color: transparent;
+    border-radius: 0.35rem;
     border: 1px solid var(--main-color);
-    color: var(--white);
-    font-size: 1rem;
+    color: var(--main-color);
+    font-size: 1.1rem;
     line-height: 30px;
     font-weight: 400;
     text-align: center;
     cursor: pointer;
     &:hover {
-      background-color: var(--main-color--hover);
       border-color: var(--main-color--hover);
+      color: #000000c1;
+      background-color: var(--main-color);
+      transition: all 0.3s linear;
+    }
+    @media screen and (min-width: 1625px) {
+      & {
+        font-size: 1.3rem;
+        padding: 10px 27px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        font-size: 1rem;
+        padding: 5px 20px;
+      }
     }
   }
 
@@ -185,11 +253,16 @@
       border: none;
       cursor: pointer;
       span {
-        color: var(--text-color);
+        color: var(--main-color);
         font-size: 1.2rem;
         &:hover {
           color: var(--main-color);
           transition: all 0.2s linear;
+        }
+        @media screen and (min-width: 1625px) {
+          & {
+            font-size: 1.6rem;
+          }
         }
       }
     }

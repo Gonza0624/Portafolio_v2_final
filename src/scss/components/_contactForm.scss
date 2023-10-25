@@ -23,6 +23,11 @@
         width: 100%;
       }
     }
+    @media screen and (min-width: 1625px) {
+      & {
+        width: 650px;
+      }
+    }
   }
 
   &__title {
@@ -43,6 +48,11 @@
         margin: 10px 0px;
       }
     }
+    @media screen and (min-width: 1625px) {
+      & {
+        font-size: 4.3rem;
+      }
+    }
   }
 
   &__title-color {
@@ -51,23 +61,33 @@
 
   &__link {
     @include mixin.flex(center);
-    margin: 20px;
+    margin-bottom: 30px;
     font-size: 17px;
     text-align: center;
     width: 100%;
-    color: var(--text-color);
+    color: var(--main-color);
     @media screen and (max-width: 450px) {
       & {
         flex-direction: column;
         margin: 25px;
       }
     }
+    @media screen and (min-width: 1625px) {
+      & {
+        font-size: 1.2rem;
+      }
+    }
   }
 
   &__form-row {
     flex-direction: column;
-    margin: 15px;
+    margin: 20px;
     width: 100%;
+    @media screen and (min-width: 1625px) {
+      & {
+        margin: 25px;
+      }
+    }
   }
 
   &__form-input {
@@ -80,7 +100,7 @@
     width: 100%;
     max-height: 200px;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: var(--text-color);
 
     &:focus {
@@ -96,6 +116,12 @@
     @media screen and (max-width: 400px) {
       & {
         padding: 15px;
+      }
+    }
+    @media screen and (min-width: 1625px) {
+      & {
+        padding: 25px;
+        font-size: 1.2rem;
       }
     }
   }
@@ -117,37 +143,63 @@
 .actived-btn {
   @include mixin.flex(center);
   width: 100%;
-  margin: 15px 0px;
+  margin: 10px 0px;
   outline: none;
-  padding: 4px 20px;
+  padding: 8px 20px;
   background-color: var(--main-color);
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
   border: 1px solid var(--main-color);
-  color: var(--white);
-  font-size: 1rem;
+  color: #000000c1;
+  font-size: 1.1rem;
   line-height: 30px;
   font-weight: 400;
   text-align: center;
   cursor: pointer;
   &:hover {
     background-color: var(--main-color--hover);
-    border-color: var(--main-color--hover);
+    transition: all 0.3s linear;
+  }
+  @media screen and (min-width: 1625px) {
+    & {
+      font-size: 1.3rem;
+      padding: 10px 27px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    & {
+      font-size: 1rem;
+      padding: 5px 20px;
+    }
   }
 }
 
 .disabled-btn {
   @include mixin.flex(center);
   width: 100%;
-  margin: 15px 0px;
+  margin: 10px 0px;
   outline: none;
-  padding: 4px 20px;
-  background-color: var(--main-color);
-  border-radius: 0.25rem;
+  padding: 8px 25px;
+  background-color: transparent;
+  border-radius: 0.35rem;
   border: 1px solid var(--main-color);
-  color: var(--white);
-  font-size: 1rem;
+  color: var(--main-color);
+  font-size: 1.1rem;
   line-height: 30px;
   font-weight: 400;
   text-align: center;
   cursor: not-allowed;
+  @media screen and (min-width: 1625px) {
+    & {
+      font-size: 1.3rem;
+      padding: 10px 27px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    & {
+      font-size: 1rem;
+      padding: 5px 20px;
+    }
+  }
 }

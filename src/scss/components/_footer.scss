@@ -2,7 +2,7 @@
 @use "../abstracts/variables";
 
 .section-main {
-  background-color: var(--white);
+  background-color: var(--main-white);
   @include mixin.flex(center);
 
   &__footer {

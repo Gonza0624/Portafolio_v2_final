@@ -44,7 +44,8 @@
   }
 
   &__img {
-    width: 45px;
+    width: 60px;
+    margin: 20px 0px;
     @media screen and (max-width: 530px) {
       & {
         width: 50px;
@@ -52,18 +53,31 @@
     }
     @media screen and (min-width: 1625px) {
       & {
-        width: 70px;
+        width: 80px;
       }
     }
   }
 
   &__my-skill {
     width: 100%;
-    h4 {
-      color: var(--text-color);
-      line-height: 1.7;
-      padding: 10px 0px;
-      width: 100%;
+    @media screen and (max-width: 500px) {
+      & {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .typescript-icon {
+    width: 75px;
+    @media screen and (max-width: 500px) {
+      & {
+        width: 64px;
+      }
+    }
+    @media screen and (min-width: 1625px) {
+      & {
+        width: 105px;
+      }
     }
   }
 }

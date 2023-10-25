@@ -9,8 +9,8 @@ import { useTranslation } from "react-i18next";
 const settings = {
   dots: true,
   infinite: true,
-  speed: 1200,
-  autoplay: true,
+  speed: 800,
+  autoplay: false,
   autoplaySpeed: 1800,
   slidesToShow: 1,
   slidesToScroll: 1,

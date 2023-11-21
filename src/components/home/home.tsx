@@ -6,6 +6,21 @@ import { useTranslation } from "react-i18next";
 const Home: React.FC = () => {
   const { t } = useTranslation("home");
 
+  const handleDownloadPDF = () => {
+    const url = `/pdf/CV.pdf`;
+
+    // Descargar el archivo PDF
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Abrir el archivo en una nueva pestaña
+    window.open(url, "_blank");
+  };
+
   return (
     <section id="home" className="home-section">
       <div className="home-section__parallax">
@@ -21,15 +36,14 @@ const Home: React.FC = () => {
             </Fade>
             <Fade direction="left" delay={50} damping={9}>
               <div className="home-section__container-btn">
-                <a
-                  target="_blank"
+                <button
                   type="button"
-                  href="https://drive.google.com/file/d/1MU9Xo_X84KLigIDndwiEWS4Oydki1Ivv/view"
+                  onClick={handleDownloadPDF}
                   className="home-section__btn"
                 >
                   {t("textBtn")}{" "}
                   <ImArrowRight2 className="home-section__icon-btn" />
-                </a>
+                </button>
               </div>
             </Fade>
           </div>

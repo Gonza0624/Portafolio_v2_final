@@ -7,12 +7,12 @@ const Home: React.FC = () => {
   const { t } = useTranslation("home");
 
   const handleDownloadPDF = () => {
-    const url = `/pdf/CV_Gonzalo_Salazar.pdf`;
+    const url = `/pdf/gonzalo.pdf`;
 
     // Descargar el archivo PDF
     const link = document.createElement("a");
     link.href = url;
-    link.download = "CV_Gonzalo_Salazar.pdf";
+    link.download = "gonzalo.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

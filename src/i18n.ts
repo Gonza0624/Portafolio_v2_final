@@ -23,7 +23,7 @@ i18n.use(initReactI18next).init({
         title: "About",
         title2: "me",
         paragraph:
-          "My name is Gonzalo, I'm 21 years old, I studied analysis and software development at Sena. I also did an internship as a Web UI developer at Globant, demonstrating responsibility, organization and creativity. My adaptability and constant desire to learn drive me to look for a collaborative work environment where I can improve my skills and grow both personally and professionally, focusing on front-end development, and eager to learn more about design and backend.",
+          "My name is Gonzalo, I'm 22 years old, I studied analysis and software development at Sena. I also did an internship as a Web UI developer at Globant, demonstrating responsibility, organization and creativity. My adaptability and constant desire to learn drive me to look for a collaborative work environment where I can improve my skills and grow both personally and professionally, focusing on front-end development, and eager to learn more about design and backend.",
       },
       objective: {
         title: "My",
@@ -114,7 +114,7 @@ i18n.use(initReactI18next).init({
         title: "Sobre",
         title2: "mi",
         paragraph:
-          "Mi nombre es Gonzalo, tengo 21 años y una formación en análisis y desarrollo de software en el SENA. También realicé prácticas como desarrollador Web UI en Globant, demostrando responsabilidad, organización y creatividad. Mi capacidad de adaptación y deseo constante de aprendizaje me impulsan a buscar un entorno de trabajo colaborativo donde pueda mejorar mis habilidades y crecer tanto personal como profesionalmente, centrándome en el desarrollo front-end, y con ganas de aprender más acerca de diseño y backend.",
+          "Mi nombre es Gonzalo, tengo 22 años y una formación en análisis y desarrollo de software en el SENA. También realicé prácticas como desarrollador Web UI en Globant, demostrando responsabilidad, organización y creatividad. Mi capacidad de adaptación y deseo constante de aprendizaje me impulsan a buscar un entorno de trabajo colaborativo donde pueda mejorar mis habilidades y crecer tanto personal como profesionalmente, centrándome en el desarrollo front-end, y con ganas de aprender más acerca de diseño y backend.",
       },
       objective: {
         title: "Mi",
